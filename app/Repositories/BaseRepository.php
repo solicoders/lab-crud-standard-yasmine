@@ -15,6 +15,8 @@ abstract class BaseRepository
      */
     protected $model;
 
+    protected $paginationLimit = 10;
+
     /**
      * @throws \Exception
      */
@@ -54,24 +56,35 @@ abstract class BaseRepository
     /**
      * Paginate records for scaffold.
      */
-    public function paginate(int $perPage, array $columns = ['*']): LengthAwarePaginator
+    public function paginate($search = [], $perPage = null, array $columns = ['*']): LengthAwarePaginator
     {
-        $query = $this->allQuery();
+        $query = $this->allQuery($search);
 
+        if (is_null($perPage)) {
+            $perPage = $this->paginationLimit;
+        }
         return $query->paginate($perPage, $columns);
     }
 
     /**
      * Build a query for retrieving all records.
      */
-    public function allQuery(array $search = [], int $skip = null, int $limit = null): Builder
+    public function allQuery($search = [], int $skip = null, int $limit = null): Builder
     {
         $query = $this->model->newQuery();
 
-        if (count($search)) {
-            foreach($search as $key => $value) {
+        if (is_array($search) && count($search)) {
+            foreach ($search as $key => $value) {
                 if (in_array($key, $this->getFieldsSearchable())) {
-                    $query->where($key, $value);
+                    if (!is_null($value)) {
+                        $query->where($key, $value);
+                    }
+                }
+            }
+        } else {
+            if (!is_null($search)) {
+                foreach ($this->getFieldsSearchable() as $searchKey) {
+                    $query->orWhere($searchKey, 'LIKE', '%' . $search . '%');
                 }
             }
         }

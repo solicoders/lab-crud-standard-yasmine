@@ -24,7 +24,13 @@ class ProjectController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $projects = $this->projectRepository->paginate(10);
+        $query = $request->input('query');
+        $projects = $this->projectRepository->paginate($query);
+
+        if ($request->ajax()) {
+            return view('projects.table')
+                ->with('projects', $projects);
+        }
 
         return view('projects.index')
             ->with('projects', $projects);
