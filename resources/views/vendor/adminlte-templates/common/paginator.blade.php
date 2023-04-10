@@ -1,5 +1,4 @@
 @if ($paginator->hasPages())
-@dd($paginator->previousPageUrl)
     <ul class="pagination m-0">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
@@ -8,8 +7,8 @@
             </li>
         @else
             <li class="page-item">
-                <button class="page-link" page-number="{{ $paginator->previousPageUrl() }}" rel="prev"
-                   aria-label="@lang('pagination.previous')">«</button>
+                <a class="page-link" href="{{ $paginator->previousPageUrl() }}" rel="prev"
+                   aria-label="@lang('pagination.previous')">«</a>
             </li>
         @endif
 
