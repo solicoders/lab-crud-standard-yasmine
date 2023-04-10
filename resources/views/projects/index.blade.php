@@ -53,26 +53,21 @@
             updatePaginationLinks()
         }
 
-        $('[name="search"]').on('input', function() {
-            searchQuery = $(this).val()
-            search(searchQuery)
-        })
-
         const updatePaginationLinks = () => {
-            $('a.page-link').each(function() {
-                page_link = $(this)
-                console.log(page_link)
-                page_number = page_link.attr('href').match(/page=(\d+)/)[1]
-                page_link.attr('page-number', page_number)
-                page_link.attr('href', null)
-                page_link.on('click', function() {
+            $('button[page-number]').each(function() {
+                $(this).on('click', function() {
                     pageNumber = $(this).attr('page-number')
                     search(searchQuery, pageNumber)
                 })
             })
         }
 
-        updatePaginationLinks()
-
+        $(document).ready(() => {
+            $('[name="search"]').on('input', function() {
+                searchQuery = $(this).val()
+                search(searchQuery)
+            })
+            updatePaginationLinks()
+        })
     </script>
 @endpush
