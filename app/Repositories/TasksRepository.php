@@ -15,7 +15,7 @@ class TasksRepository extends BaseRepository {
     'projetId',
     'description',
    ];
-   public function getFieldTask():array {
+   public function getFieldData():array {
     return $this->fieldTask;
    }
    public function model():string{
