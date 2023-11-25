@@ -20,8 +20,8 @@ class AddRequest extends FormRequest {
 
      public function rules():array{
         return [
-            'name' => 'required|max:40',
-            'projectId' => 'required',
+            'nom' => 'required|max:40',
+            'projetId' => 'required',
             'description' => 'required',
         ];
      }
