@@ -1,28 +1,39 @@
 @extends('layouts.layout')
 @extends('layouts.nav')
 @section('content')
-<div class="container"> 
-    <table class="table"> 
-       <thead> 
-           <tr> 
-               <th scope="col">Nom</th> 
-               <th scope="col">Prenom</th> 
-               <th scope="col">Action</th>
-           </tr> 
-       </thead> 
-       <tbody id="search-result">
-              @include('search')
-       </tbody>
-       <input type="hidden" id='page' value="1">
- </table>
+
+<div class="container mt-5">
+<div class="mb-3">
+            <select name="projetId" id="filterCriteria">
+              <option value="Filtrer par projet" selected>Filtrer par projet</option>
+                @foreach($projectData as $project)
+                <option value="{{$project->nom}}">{{$project->nom}}</option>
+                @endforeach
+            </select>
+        </div>
+  <table class="table table-striped text-nowrap container border text-center">
+    <thead>
+      <tr>
+        <th scope="col" class="border">Nom</th>
+        <th scope="col" class="border">Description</th>
+        <th scope="col" class="border">Action</th>
+      </tr>
+    </thead>
+    <tbody id="search-result">
+    @include('search')
+    </tbody>
+    <input type="hidden" id='page' value="1">
+  </table>
 </div>
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
   $(document).ready(function (){
-     function fetchData(page , searchValue){
+     function fetchData(page , searchValue ,criteria){
       $.ajax({
-        url : 'tasks/?page=' + page + '&searchValue=' + searchValue,
+        url : 'tasks/?page=' + page + '&searchValue=' + searchValue + '&criteria=' + criteria,
         success: function(data){
           $('tbody').html('');
           $('tbody').html(data);
@@ -37,18 +48,26 @@
 
       var page = $(this).attr('href').split('page=')[1];
       var searchValue = $('#search-input').val();
+      var criteria = $('filterCriteria').val();
       console.log($(this).attr('href').split('page=')[1]);
       console.log($(this).attr('href').split('page='));
 
-      fetchData(page, searchValue);
+      fetchData(page, searchValue,criteria);
 
      });
 
      $('body').on('keyup' , '#search-input' ,  function (){
       var page = $('#page').val();
       var searchValue = $('#search-input').val();
-      fetchData(page , searchValue);
+      var criteria = $('filterCriteria').val();
+      fetchData(page , searchValue , criteria);
      });
+     $('#filterCriteria').on('change' , '#filterCriteria' function(){
+      var page = $('#page').val();
+      var searchValue = $('#search-input').val();
+      var criteria = $('filterCriteria').val();
+      fetchData(page,searchValue,criteria);
+     })
 
   });
 </script>

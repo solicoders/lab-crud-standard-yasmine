@@ -13,7 +13,7 @@
         @method('patch')
     <div class="mb-3">
     <select name="projetId" id="projetId">
-    @foreach($projects as $project)
+    @foreach($projectData as $project)
         <option value="{{ $project->id }}" @if($project->id == $task->projetId) selected @endif>
             {{ $project->nom }}
         </option>

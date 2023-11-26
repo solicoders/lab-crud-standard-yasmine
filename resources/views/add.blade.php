@@ -13,7 +13,7 @@
         @csrf
     <div class="mb-3">
             <select name="projetId" id="">
-                @foreach($projects as $project)
+                @foreach($projectData as $project)
                 <option value="{{$project->id}}">{{$project->nom}}</option>
                 @endforeach
             </select>

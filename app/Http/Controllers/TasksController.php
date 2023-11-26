@@ -6,29 +6,34 @@ use App\Models\Project;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use App\Repositories\TasksRepository;
+use App\Repositories\ProjectRepository;
 use App\Http\Requests\AddRequest;
 use App\Http\Requests\UpdateRequest;
 
 class TasksController extends Controller
 {
     protected $tasksRepository;
-    public function __construct(TasksRepository $tasksRepository){
+    protected $projectRepository;
+    public function __construct(TasksRepository $tasksRepository , ProjectRepository $projectRepository){
         $this->tasksRepository = $tasksRepository;
+        $this->projectRepository = $projectRepository;
     }
     public function index(Request $request){
         $tasks = $this->tasksRepository->index();
+        $projectData = $this->projectRepository->getData();
+
         if($request->ajax()){
             $seachQuery = $request->get('searchValue');
             $seachQuery = str_replace(' ','%', $seachQuery);
             $tasks = Task::query()->where('nom','like','%'.$seachQuery. '%')->orWhere('description' , 'like' , '%' . $seachQuery . '%')->paginate(3);
-            return view('search' , compact('tasks'))->render();
+            return view('search' , compact('tasks' ,'projectData'))->render();
         }
        
-        return view('task',compact('tasks'))->render();
+        return view('task',compact('tasks' , 'projectData'))->render();
     }
     public function create(){
-    $projects = Project::all();
-        return view('add' , compact('projects'));
+        $projectData = $this->projectRepository->getData();
+        return view('add' , compact('projectData'));
     }
     public function store(AddRequest $request){
         $validatedData = $request->validated();
@@ -37,8 +42,8 @@ class TasksController extends Controller
     }
     public function edit($id){
         $task = $this->tasksRepository->edit($id);
-        $projects = Project::all();
-        return view('edit' , compact('task' , 'projects'));
+        $projectData = $this->projectRepository->getData();
+        return view('edit' , compact('task' , 'projectData'));
     }
     public function update(UpdateRequest $request , $id){
         $validatedData = $request->validated();
