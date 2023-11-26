@@ -1,11 +1,15 @@
 @foreach($projects as $project)
-    <tr>
-        <th>{{$project->nom}}</th>
-        <td>{{$project->description}}</td>
-    </tr>
-    @endforeach
-    <tr>
-        <td colspan="3" aligne="center">
+<tr>
+    <th class="border">{{$project->nom}}</th>
+    <td class="border">{{$project->description}}</td>
+</tr>
+@endforeach
+<tr>
+    <td></td>
+    <td colspan="3">
+        <div class="w-25 container">
             {!! $projects->links() !!}
-        </td>
-    </tr>
+        </div>
+    </td>
+
+</tr>

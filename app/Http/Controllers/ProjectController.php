@@ -15,26 +15,22 @@ class ProjectController extends Controller
     public function index(Request $request){
         $projects = $this->projectRepository->index();
         $projectData = $this->projectRepository->getData();
+
         if($request->ajax()){
-            $searchQuery = $request->get('searchValue');
-            $filterName = $request->get('criteria');
-    
             $query = Project::query();
-    
-            if ($searchQuery) {
-                $query->where(function($q) use ($searchQuery) {
-                    $q->where('nom', 'like', '%' . $searchQuery . '%')
-                      ->orWhere('description', 'like', '%' . $searchQuery . '%');
-                });
+            $seachQuery = $request->get('searchValue');
+            $filterName = $request->get('criteria');
+            $seachQuery = str_replace(' ','%', $seachQuery);
+            if($seachQuery){
+
+                $query->where('nom','like','%'.$seachQuery. '%')->orWhere('description' , 'like' , '%' . $seachQuery . '%')->paginate(3);
             }
-    
-            if ($filterName) {
-                $query->where('nom', $filterName);
+            if($filterName !== 'Filtrer par projet'){
+                $query->where('nom' , $filterName );
             }
-    
             $projects = $query->paginate(3);
-    
-            return view('projectSearch', compact('projects'))->render();
+                return view('projectSearch', compact('projects'))->render();
+
         }
         return view('home' , compact('projects' , 'projectData'))->render();
     }

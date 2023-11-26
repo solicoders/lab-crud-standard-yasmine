@@ -1,19 +1,20 @@
 @extends('layouts.layout')
 @extends('layouts.nav')
 @section('content')
-<div class="container">
+<div class="container mt-5">
 <div class="mb-3">
             <select name="projetId" id="filterCriteria">
+              <option value="Filtrer par projet" selected>Filtrer par projet</option>
                 @foreach($projectData as $project)
                 <option value="{{$project->nom}}">{{$project->nom}}</option>
                 @endforeach
             </select>
         </div>
-  <table class="table">
+  <table class="table table-striped text-nowrap container border text-center">
     <thead>
       <tr>
-        <th scope="col">Nom</th>
-        <th scope="col">Description</th>
+        <th scope="col" class="border">Nom</th>
+        <th scope="col" class="border">Description</th>
       </tr>
     </thead>
     <tbody id="search-result">
@@ -22,6 +23,9 @@
     <input type="hidden" id='page' value="1">
   </table>
 </div>
+
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
@@ -35,6 +39,7 @@
         }
       });
       console.log(criteria);
+      console.log(searchValue);
     }
 
     $('body').on('click', '.pagination a', function (param) {
@@ -43,7 +48,7 @@
 
       var page = $(this).attr('href').split('page=')[1];
       var searchValue = $('#search-input').val();
-      var criteria = $(this).val();
+      var criteria = $('#filterCriteria').val();
 
       fetchData(page, searchValue,criteria);
 
@@ -52,9 +57,11 @@
     $('body').on('keyup', '#search-input', function () {
       var page = $('#page').val();
       var searchValue = $('#search-input').val();
-      var criteria = $(this).val();
+      var criteria = $('#filterCriteria').val();
+
       fetchData(page, searchValue , criteria);
     });
+    
     $('#filterCriteria').on('change', function () {
       var page = $('#page').val();
       var searchValue = $('#search-input').val();
