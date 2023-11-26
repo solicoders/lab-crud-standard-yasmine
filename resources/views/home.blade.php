@@ -2,23 +2,22 @@
 @extends('layouts.nav')
 @section('content')
 <div class="container">
-  <div class="mb-3">
-    <select name="projetId" id="">
-      @foreach($projects as $project)
-      <option value="{{$project->id}}">{{$project->nom}}</option>
-      @endforeach
-    </select>
-  </div>
+<div class="mb-3">
+            <select name="projetId" id="filterCriteria">
+                @foreach($projectData as $project)
+                <option value="{{$project->nom}}">{{$project->nom}}</option>
+                @endforeach
+            </select>
+        </div>
   <table class="table">
     <thead>
       <tr>
         <th scope="col">Nom</th>
         <th scope="col">Description</th>
-        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody id="search-result">
-      @include('search')
+      @include('projectSearch')
     </tbody>
     <input type="hidden" id='page' value="1">
   </table>
@@ -27,14 +26,15 @@
 
 <script>
   $(document).ready(function () {
-    function fetchData(page, searchValue) {
+    function fetchData(page, searchValue ,criteria) {
       $.ajax({
-        url: '/?page=' + page + '&searchValue=' + searchValue,
+        url: '/?page=' + page + '&searchValue=' + searchValue + '&criteria=' + criteria,
         success: function (data) {
           $('tbody').html('');
           $('tbody').html(data);
         }
       });
+      console.log(criteria);
     }
 
     $('body').on('click', '.pagination a', function (param) {
@@ -43,20 +43,25 @@
 
       var page = $(this).attr('href').split('page=')[1];
       var searchValue = $('#search-input').val();
-      console.log($(this).attr('href').split('page=')[1]);
-      console.log($(this).attr('href').split('page='));
+      var criteria = $(this).val();
 
-      fetchData(page, searchValue);
+      fetchData(page, searchValue,criteria);
 
     });
 
     $('body').on('keyup', '#search-input', function () {
       var page = $('#page').val();
       var searchValue = $('#search-input').val();
-      fetchData(page, searchValue);
+      var criteria = $(this).val();
+      fetchData(page, searchValue , criteria);
+    });
+    $('#filterCriteria').on('change', function () {
+      var page = $('#page').val();
+      var searchValue = $('#search-input').val();
+      var criteria = $(this).val();
+      fetchData(page, searchValue, criteria);
     });
 
-    fetchData(1, '');
   });
 </script>
 @endsection

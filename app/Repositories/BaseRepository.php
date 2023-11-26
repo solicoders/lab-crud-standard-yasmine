@@ -15,7 +15,9 @@ abstract public function model():string;
 
 public function index(){
     return $this->model->paginate(3);
-    
+}
+public function getData(){
+    return $this->model->select('id', 'nom')->get();
 }
 public function store(array $validatedData){
     $this->model->create($validatedData);
