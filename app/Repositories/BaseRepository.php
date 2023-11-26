@@ -16,6 +16,9 @@ abstract public function model():string;
 public function index(){
     return $this->model->paginate(3);
 }
+public function show($id){
+   return $this->model->where('projetId' , $id)->paginate(3);
+}
 public function getData(){
     return $this->model->select('id', 'nom')->get();
 }

@@ -7,7 +7,9 @@
             <select name="projetId" id="filterCriteria">
               <option value="Filtrer par projet" selected>Filtrer par projet</option>
                 @foreach($projectData as $project)
-                <option value="{{$project->nom}}">{{$project->nom}}</option>
+   
+                <option value="{{$project->nom}}" @if($project->id == $projectId) selected @endif>{{$project->nom}}</option>
+   
                 @endforeach
             </select>
         </div>

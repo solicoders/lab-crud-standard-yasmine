@@ -18,8 +18,8 @@ class TasksController extends Controller
         $this->tasksRepository = $tasksRepository;
         $this->projectRepository = $projectRepository;
     }
-    public function index(Request $request){
-        $tasks = $this->tasksRepository->index();
+    public function show(Request $request , $id){
+        $tasks = $this->tasksRepository->show($id);
         $projectData = $this->projectRepository->getData();
 
         if($request->ajax()){
@@ -28,8 +28,8 @@ class TasksController extends Controller
             $tasks = Task::query()->where('nom','like','%'.$seachQuery. '%')->orWhere('description' , 'like' , '%' . $seachQuery . '%')->paginate(3);
             return view('search' , compact('tasks' ,'projectData'))->render();
         }
-       
-        return view('task',compact('tasks' , 'projectData'))->render();
+        $projectId = $id;
+        return view('task',compact('tasks' , 'projectId' , 'projectData'))->render();
     }
     public function create(){
         $projectData = $this->projectRepository->getData();

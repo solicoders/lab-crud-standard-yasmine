@@ -15,7 +15,7 @@ use App\Http\Controllers\TasksController;
 |
 */
 Route::get('/' , [ProjectController::class, 'index'])->name('home');
-Route::get('/tasks', [TasksController::class, 'index'])->name('tasks');
+Route::get('/tasks/{id}', [TasksController::class, 'show'])->name('tasks');
 Route::get('add.task', [TasksController::class, 'create'])->name('add.task');
 Route::post('add.task', [TasksController::class, 'store'])->name('add.task');
 Route::get('edit/{id}' ,[TasksController::class, 'edit'])->name('edit.task');
