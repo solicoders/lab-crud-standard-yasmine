@@ -23,10 +23,20 @@ class TasksController extends Controller
         $projectData = $this->projectRepository->getData();
 
         if($request->ajax()){
+            $query = Task::query();
             $seachQuery = $request->get('searchValue');
             $seachQuery = str_replace(' ','%', $seachQuery);
-            $tasks = Task::query()->where('nom','like','%'.$seachQuery. '%')->orWhere('description' , 'like' , '%' . $seachQuery . '%')->paginate(3);
+            $filterName = $request->get('criteria');
+            if($seachQuery && $filterName !== 'Filtrer par projet'){
+                $query->where('nom','like','%'.$seachQuery. '%')->where('projetId', $filterName)->orWhere('description' , 'like' , '%' . $seachQuery . '%')->paginate(3);
+            }
+            if($filterName){
+                $query->where('projetId' , $filterName);
+                $tasks = $query->paginate(3);
+            }
+            $tasks = $query->paginate(3);
             return view('search' , compact('tasks' ,'projectData'))->render();
+            
         }
         $projectId = $id;
         return view('task',compact('tasks' , 'projectId' , 'projectData'))->render();

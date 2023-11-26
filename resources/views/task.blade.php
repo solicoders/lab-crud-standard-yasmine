@@ -8,7 +8,7 @@
               <option value="Filtrer par projet" selected>Filtrer par projet</option>
                 @foreach($projectData as $project)
    
-                <option value="{{$project->nom}}" @if($project->id == $projectId) selected @endif>{{$project->nom}}</option>
+                <option value="{{$project->id}}" @if($project->id == $projectId) selected @endif>{{$project->nom}}</option>
    
                 @endforeach
             </select>
@@ -39,7 +39,7 @@
         success: function(data){
           $('tbody').html('');
           $('tbody').html(data);
-          console.log(data);
+          console.log(criteria);
         }
       });
      }
@@ -50,9 +50,9 @@
 
       var page = $(this).attr('href').split('page=')[1];
       var searchValue = $('#search-input').val();
-      var criteria = $('filterCriteria').val();
+      var criteria = $('#filterCriteria').val();
       console.log($(this).attr('href').split('page=')[1]);
-      console.log($(this).attr('href').split('page='));
+      console.log($(this).attr('href'));
 
       fetchData(page, searchValue,criteria);
 
@@ -61,15 +61,20 @@
      $('body').on('keyup' , '#search-input' ,  function (){
       var page = $('#page').val();
       var searchValue = $('#search-input').val();
-      var criteria = $('filterCriteria').val();
+      var criteria = $('#filterCriteria').val();
       fetchData(page , searchValue , criteria);
      });
-     $('#filterCriteria').on('change' , '#filterCriteria' function(){
+     $('#filterCriteria').on('change', function () {
       var page = $('#page').val();
       var searchValue = $('#search-input').val();
-      var criteria = $('filterCriteria').val();
-      fetchData(page,searchValue,criteria);
-     })
+      var criteria = $(this).val();
+      var baseUrl = window.location.href.split('/'); 
+       baseUrl.pop(); 
+    var newUrl = baseUrl.join('/') + '/' + criteria; 
+    console.log(newUrl);
+    window.history.pushState({path: newUrl}, '', newUrl); 
+      fetchData(page, searchValue, criteria);
+    });
 
   });
 </script>

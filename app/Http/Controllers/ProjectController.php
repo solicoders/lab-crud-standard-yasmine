@@ -25,7 +25,7 @@ class ProjectController extends Controller
 
                 $query->where('nom','like','%'.$seachQuery. '%')->orWhere('description' , 'like' , '%' . $seachQuery . '%')->paginate(3);
             }
-            if($filterName !== 'Filtrer par projet'){
+            if($filterName){
                 $query->where('nom' , $filterName );
             }
             $projects = $query->paginate(3);
