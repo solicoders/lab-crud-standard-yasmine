@@ -2,6 +2,7 @@
 <tr>
     <th class="border">{{$project->nom}}</th>
     <td class="border">{{$project->description}}</td>
+    <td class="border"><a href="" class='btn btn-secondary'><i class="fas fa-eye"></i></a></td>
 </tr>
 @endforeach
 <tr>

@@ -24,7 +24,7 @@ class TasksController extends Controller
             return view('search' , compact('tasks'))->render();
         }
        
-        return view('home',compact('tasks'));
+        return view('task',compact('tasks'))->render();
     }
     public function create(){
     $projects = Project::all();
@@ -47,6 +47,6 @@ class TasksController extends Controller
     }
     public function destroy($id){
         $this->tasksRepository->destroy($id);
-        return redirect()->route('home');
+        return redirect()->route('tasks');
     }
 }

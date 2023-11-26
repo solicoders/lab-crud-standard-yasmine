@@ -22,10 +22,11 @@
   $(document).ready(function (){
      function fetchData(page , searchValue){
       $.ajax({
-        url : '/?page=' + page + '&searchValue=' + searchValue,
+        url : 'tasks/?page=' + page + '&searchValue=' + searchValue,
         success: function(data){
           $('tbody').html('');
           $('tbody').html(data);
+          console.log(data);
         }
       });
      }
@@ -49,7 +50,6 @@
       fetchData(page , searchValue);
      });
 
-     fetchData(1, '');
   });
 </script>
 @endsection

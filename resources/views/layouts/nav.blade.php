@@ -27,8 +27,11 @@
           />
         </a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('home')}}">Liste des projets</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('home')}}">Liste des taches</a>
+            <a class="nav-link" href="{{route('tasks')}}">Liste des tâches</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('add.task')}}">Ajouté une tache</a>

@@ -15,6 +15,7 @@
       <tr>
         <th scope="col" class="border">Nom</th>
         <th scope="col" class="border">Description</th>
+        <th scope="col" class="border">Tâches</th>
       </tr>
     </thead>
     <tbody id="search-result">
@@ -61,7 +62,7 @@
 
       fetchData(page, searchValue , criteria);
     });
-    
+
     $('#filterCriteria').on('change', function () {
       var page = $('#page').val();
       var searchValue = $('#search-input').val();
