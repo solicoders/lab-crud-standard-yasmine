@@ -1,7 +1,11 @@
 # lab crud standard
 This repository presents a standard Laravel project for task management.
 
-## Travail à faire
+## Référence 
+
+- https://github.com/labs-web/lab-crud-standard
+
+### Travail à faire
 
 - compléter le travail sur [`lab crud laravel basic`](https://github.com/Jalil-Betroji/lab-crud.git)
 - Opérations CRUD pour les tâches
