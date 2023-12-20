@@ -1,46 +1,53 @@
-## Create new Laravel project
-```bash
-composer create-project --prefer-dist laravel/laravel:^9.0 project-manager
-```
+# lab crud standard
+This repository presents a standard Laravel project for task management.
 
-> Add following packages into composer.json while using it with Laravel 9.
-```json
- "require": {
-     "infyomlabs/laravel-generator": "^5.0",
-     "infyomlabs/adminlte-templates": "^5.0",
-     "doctrine/dbal": "~2.3"
- }  
- ```
-> composer update
+## Référence 
 
-```bash
-php artisan vendor:publish --provider="InfyOm\Generator\InfyOmGeneratorServiceProvider"
-```
- 
-```bash
-php artisan infyom:publish --localized
-```
+- https://github.com/labs-web/lab-crud-standard
 
-```bash
-composer require infyomlabs/laravel-ui-adminlte
-```
+### Travail à faire
+
+- compléter le travail sur [`lab crud laravel basic`](https://github.com/Jalil-Betroji/lab-crud.git)
+- Opérations CRUD pour les tâches
+- Pagination
+- Recherche (AJAX)
+- Pattern Repository
+- Affichage des projets
+- Filtrer par projet
+- Données d'exemple (jeux de test)
+
+#### Process Workflow 
+
+1. Start by cloning lab crud basic with this command:
 
 ```bash
-php artisan ui adminlte --auth
+git clone https://github.com/Jalil-Betroji/lab-crud.git
+
 ```
+2. Next, create the .env file using the command:
 
 ```bash
-npm install && npm install laravel-mix --save-dev && npm run dev
+cp .env.example .env
 ```
+3. Add the database name to the .env file.
 
-```bash
-php artisan make:migration create_projects_table
-```
+4. Migrate tables to the database:
 
 ```bash
 php artisan migrate
+
 ```
 
+5. Populate the database with project information by creating a seeder and executing:
+
 ```bash
-php artisan infyom:scaffold Project --fromTable --table=projects
+php artisan db:seed
+```
+
+
+6. To view your project's progress locally, run this command:
+
+```bash 
+php artisan serve
+
 ```
