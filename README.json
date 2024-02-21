@@ -29,12 +29,8 @@
         "Introduction":"",
         "References": [
             {
-                "Titre":"Rapport",
-                "Lien":"https://labs-web.github.io/lab-crud-laravel-standard/"
-            },
-            {
-                "Titre":"Presentation",
-                "Lien":"https://labs-web.github.io/lab-crud-laravel-standard/presentation.html#/"
+                "Titre":"Autoformation",
+                "Lien":"#"
             }
            
         ]
