@@ -37,6 +37,4 @@ Le backlog est une liste ordonées des tâches
  
 
 - [Autoformation](#) 
-- [Rapport](https://labs-web.github.io/lab-crud-laravel-standard/) 
-- [Presentation](https://labs-web.github.io/lab-crud-laravel-standard/presentation.html#/) 
 
