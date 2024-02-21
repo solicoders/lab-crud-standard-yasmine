@@ -1,1 +1,1 @@
-# Lab-crud-standard
+# Lab CRUD Laravel Standard
