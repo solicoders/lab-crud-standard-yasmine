@@ -10,29 +10,36 @@ Pour réaliser le prototype, vous aurez besoin de plusieurs prérequis, tant au 
 
 - **Connaissances de base en programmation web :**
 
+![les langues de programation](./images/les-langues.jpg){:width="500px"}
+*les langues de programation*
+
 Vous devriez avoir des connaissances de base en développement web, y compris HTML, CSS, JavaScript et PHP, ainsi qu'une compréhension générale du modèle MVC (Modèle-Vue-Contrôleur) utilisé par Laravel.
 
 - **Environnement de développement local :**
+  
+![Environnement](./images/apache-php-mysql.jpg){:width="500px"}
+*Environnement*
 
-Vous devez avoir un environnement de développement local configuré sur votre machine. Cela peut inclure un serveur web (comme Apache ou Nginx), PHP, et une base de données (MySQL, PostgreSQL, etc.).
-Des outils comme XAMPP, WAMP, ou Laravel Homestead peuvent faciliter cette configuration.
+Pour réaliser cette application, nous devons disposer d'un environnement de développement local configuré sur notre machine.
+Cela inclura un serveur Web Apache, PHP et un SGBD comme MySQL.
 
 - **Composer :**
+
+![Composer](./images/composer.png){:width="500px"}
+*Composer*
+
 Composer est un gestionnaire de dépendances pour PHP. Laravel utilise Composer pour gérer ses dépendances et ses packages. Assurez-vous d'avoir Composer installé sur votre système.
 
-- **Laravel Installer :**
+- **Laravel Framework :**
 
-Vous aurez besoin de l'outil en ligne de commande Laravel Installer pour créer de nouveaux projets Laravel. Vous pouvez l'installer via Composer en exécutant composer.
+![Laravel](./images/laravel.png){:width="500px"}
+*Laravel*
+
+Nous avons besoin d'un framework php comme laravel pour réaliser ce projet.
 
 - **AdminLTE :**
 
-Téléchargez ou incluez AdminLTE dans votre projet Laravel. Vous pouvez le télécharger depuis le site officiel ou utiliser Composer s'il est disponible sous forme de package Composer.
+![AdminLTE](./images/admin-lte.png){:width="500px"}
+*AdminLTE*
 
-- **Connaissance de Laravel :**
-
-Une compréhension de base de Laravel est essentielle pour travailler avec le framework. Vous devriez être à l'aise avec la structure du projet Laravel, les migrations de base de données, les routes, les contrôleurs, les vues, etc.
-
-- **Base de données :**
-
-Assurez-vous que votre système de gestion de base de données est configuré et fonctionne correctement. Laravel prend en charge plusieurs bases de données relationnelles, alors choisissez celle qui convient le mieux à votre projet.
-
+Nous devons télécharger AdminLTE dans notre projet Laravel depuis le site officiel d'Admin LTE, ce package servira d'interface utilisateur de notre projet.
