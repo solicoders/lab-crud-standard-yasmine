@@ -6,6 +6,7 @@ order: 4
 ---
 
 <!-- new slide -->
+
 # Compétences cibles
 
 ![Compétences cibles](./images/skills.png)
