@@ -1,6 +1,6 @@
 ---
 layout: default
-chapitre: lab-crud-laravel-standard
+chapitre: introduction
 order: 1
 ---
 
