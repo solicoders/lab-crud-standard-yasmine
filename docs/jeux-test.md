@@ -1,7 +1,7 @@
 ---
 layout: default
 chapitre: jeux test
-order: 1
+order: 8
 ---
 # jeux test
 
