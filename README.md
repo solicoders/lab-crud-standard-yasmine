@@ -44,5 +44,5 @@ Le backlog est une liste ordonées des tâches
 
  
 
-- [Autoformation](#) 
+- [Rapport](https://solicoders.github.io/lab-crud-standard-yasmine/index.html) 
 
