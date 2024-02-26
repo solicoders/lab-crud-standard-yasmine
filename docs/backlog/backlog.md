@@ -6,7 +6,6 @@ order: 2
 
 
 # Backlog
-
 <!-- new slide -->
 ## Structure des dossiers
 
