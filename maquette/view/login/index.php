@@ -7,7 +7,7 @@
 <div class="login-box">
         <div class="login-logo">
             <img src="../assets/images/logo.png" alt="" srcset="" width="90px">
-            <h4>Gestion des Projet</h4>
+            <h4>Gestion des Autoformations</h4>
         </div>
         <!-- /.login-logo -->
 

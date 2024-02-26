@@ -1,6 +1,5 @@
 ---
 layout: default
-chapitre: maquettes
 order: 8
 ---
 
@@ -10,6 +9,8 @@ order: 8
 ## install adminlte
 ```bash
 npm install admin-lte@^3.2 --save
+ npm install  
+ php -S localhost:8000
 ```
 <!-- note -->
 

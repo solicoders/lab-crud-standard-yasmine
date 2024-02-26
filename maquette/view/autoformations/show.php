@@ -19,7 +19,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Détails du tache</h1>
+                            <h1>Détails d'autoformations</h1>
                         </div>
                         <div class="col-sm-6">
                             <a href="./edit.php" class="btn btn-default float-right"><i class="far fa-edit"></i> Modifier</a>
@@ -35,21 +35,24 @@
                                 <div class="card-body">
                                     <div class="col-sm-12">
                                         <label for="nom">Nom:</label>
-                                        <p>tâche 1</p>
-                                    </div>
-
-                                    <!-- Projects Title -->
-                                    <div class="col-sm-12">
-                                        <label for="description">Titre du projet:</label>
-                                        <p>Projet1 </p>
+                                        <p>Laravel</p>
                                     </div>
 
                                     <!-- Description Field -->
                                     <div class="col-sm-12">
                                         <label for="description">Description:</label>
-                                        <p>Description du tâche 1.</p>
+                                        <p>Formation complète</p>
                                     </div>
 
+                                    <div class="col-sm-12">
+                                        <label for="description">Nombre chapitres:</label>
+                                        <p>27</p>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <label for="description">Reference:</label>
+                                        <p><a href="https://grafikart.fr/formations/laravel" target="_blank">grafikart</a></p>
+                                    </div>
                                     <!-- Description Field -->
                                     <div class="col-sm-12">
                                         <label for="description">Date:</label>

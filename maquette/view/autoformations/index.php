@@ -18,12 +18,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Liste des projets</h1>
+                            <h1>Liste des autoformations</h1>
                         </div>
                         <div class="col-sm-6">
                             <div class="float-sm-right">
                                 <a href="./create.php" class="btn btn-info">
-                                    <i class="fas fa-plus"></i> Nouveau projet
+                                    <i class="fas fa-plus"></i> Nouveau autoformations
                                 </a>
                             </div>
 
@@ -53,23 +53,27 @@
                                     <table class="table table-striped text-nowrap">
                                         <thead>
                                             <tr>
-                                                <th>Titre</th>
+                                            <th>Name</th>
                                                 <th>Description</th>
-                                                <th>Date de Début</th>
-                                                <th>Date de Fin</th>
-                                                <th class="text-center">Actions</th>
+                                                <th>Nombre chapitres</th>
+                                                <th>Reference</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                                <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Projet 1</td>
+                                                <td>Laravel</td>
                                                 <td>
-                                                    Description du projet 1.
-                                                </td>
+                                                    Formation complète 
+                                                                                              </td>
+                                                 <td >27</td>
+                                                 <td><a href="https://grafikart.fr/formations/laravel" target="_blank">grafikart</a></td> 
                                                 <td>11-7-2014</td>
                                                 <td>11-7-2014</td>
                                                 <td class="text-center">
-                                                <a href="../taches/index.php" class="btn btn-sm btn-secondary mx-2"><i class="nav-icon fas fa-tasks"></i> Les Tâches</a>
+                                                <a href="../chapitres/index.php" class="btn btn-sm btn-secondary mx-2"><i class="nav-icon fas fa-tasks"></i> Les Châpitre</a>
                                                     <a href="./show.php" class='btn btn-default btn-sm'>
                                                         <i class="far fa-eye"></i>
                                                     </a>
@@ -77,55 +81,19 @@
                                                     <button type="button" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>Projet 2</td>
-                                                <td>
-                                                    Description du projet 2.
-                                                </td>
-                                                <td>11-7-2014</td>
-                                                <td>11-7-2014</td>
-                                                <td class="text-center">
-                                                <a href="../taches/index.php" class="btn btn-sm btn-secondary mx-2"><i class="nav-icon fas fa-tasks"></i> Les Tâches</a>
-                                                    <a href="./show.php" class='btn btn-default btn-sm'>
-                                                        <i class="far fa-eye"></i>
-                                                    </a>
-                                                    <a href="./edit.php" class="btn btn-sm btn-default"><i class="fa-solid fa-pen-to-square"></i></a>
-                                                    <button type="button" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Projet 3</td>
-                                                <td>
-                                                    Description du projet 3.
-                                                </td>
-                                                <td>11-7-2014</td>
-                                                <td>11-7-2014</td>
-                                                <td class="text-center">
-                                                <a href="../taches/index.php" class="btn btn-sm btn-secondary mx-2"><i class="nav-icon fas fa-tasks"></i> Les Tâches</a>
-                                                    <a href="./show.php" class='btn btn-default btn-sm'>
-                                                        <i class="far fa-eye"></i>
-                                                    </a>
-                                                    <a href="./edit.php" class="btn btn-sm btn-default"><i class="fa-solid fa-pen-to-square"></i></a>
-                                                    <button type="button" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
-                                                </td>
-                                            </tr>
+                                          
                                         </tbody>
                                     </table>
                                 </div>
 
                                 <div class="d-flex justify-content-between align-items-center p-2">
                                     <div class="d-flex align-items-center mb-2">
-                                        <button type="button" class="btn  btn-default btn-sm">
-                                            <i class="fa-solid fa-file-arrow-down"></i>
-                                            IMPORTER</button>
-                                        <button type="button" class="btn  btn-default btn-sm mt-0 mx-2">
-                                            <i class="fa-solid fa-file-export"></i>
-                                            EXPORTER</button>
+                                       
                                     </div>
                                     <div class="mr-5">
                                         <ul class="pagination  m-0 float-right">
                                             <li class="page-item"><a class="page-link text-secondary" href="#">«</a></li>
-                                            <li class="page-item"><a class="page-link text-secondary active" href="#">1</a></li>
+                                            <li class="page-item active bg-info "><a class="page-link" href="#">1</a></li>
                                             <li class="page-item"><a class="page-link text-secondary" href="#">2</a></li>
                                             <li class="page-item"><a class="page-link text-secondary" href="#">3</a></li>
                                             <li class="page-item"><a class="page-link text-secondary" href="#">»</a></li>

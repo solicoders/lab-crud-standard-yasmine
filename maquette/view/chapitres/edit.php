@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<!-- Inclure l'en-tête -->
+<!-- Inclusion de l'en-tête -->
 <?php include_once "../layouts/heade.php" ?>
 
 <body class="sidebar-mini" style="height: auto;">
@@ -12,10 +12,7 @@
         <!-- Barre latérale -->
         <?php include_once "../layouts/aside.php" ?>
 
-        <div class="content-wrapper" style="min-height: 1302.4px;">
-
-            <div class="content-header">
-            </div>
+        <div class="content-wrapper pt-4" style="min-height: 1302.4px;">
 
             <section class="content">
                 <div class="container-fluid">
@@ -24,11 +21,12 @@
 
                             <div class="card card-info">
                                 <div class="card-header">
-                                    <h3 class="card-title"> <i class="nav-icon fas fa-table"></i> Ajouter un Projet</h3>
+                                    <h3 class="card-title"> <i class="nav-icon fas fa-tasks"></i> Modifier une châpitre</h3>
                                 </div>
-                                <!-- Obtenir le formulaire -->
+                                <!-- Inclusion du formulaire -->
                                 <?php include_once "./form.php" ?>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -36,10 +34,9 @@
             </section>
 
         </div>
-    </div>
 
-    <!-- Inclure le pied de page -->
-    <?php include_once "../layouts/footer.php" ?>
+        <!-- Inclure le pied de page -->
+        <?php include_once "../layouts/footer.php" ?>
 
     </div>
 
