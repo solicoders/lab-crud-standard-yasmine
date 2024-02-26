@@ -20,6 +20,7 @@ order: 5
 * Rédaction du fichier README
 * Configuration de Laravel pour utiliser Vite
 
+
 ## Critères de validation
 
 * Le projet Laravel est fonctionnel.
