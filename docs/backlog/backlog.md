@@ -10,7 +10,10 @@ order: 2
 <!-- new slide -->
 ## Structure des dossiers
 
-![Structure des dossiers](./images/structure-des-dossier.jpg){:width="400px" }
+![Structure des dossiers](/lab-crud-standard-yasmine/backlog/images/structure-des-dossier.jpg){:width="400px" }
+
+
+
 
 <!-- note -->
 
