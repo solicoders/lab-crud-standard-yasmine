@@ -6,7 +6,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
         <div class="login-logo">
-            <img src="../assets/images/logo.png" alt="" srcset="" width="90px">
+          
             <h4>Gestion des Autoformations</h4>
         </div>
         <!-- /.login-logo -->
@@ -43,7 +43,7 @@
                         </div>
 
                         <div class="col-5">
-                            <a href="../projets/index.php" type="submit" class="btn btn-info btn-block">connecter</a>
+                            <a href="../autoformations/index.php" type="submit" class="btn btn-info btn-block">connecter</a>
                         </div>
 
                     </div>
