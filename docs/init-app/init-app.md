@@ -12,11 +12,8 @@ order: 5
 
 * Création d'un projet Laravel
 * Installation d'AdminLTE
-* Rédaction du fichier README
+
   
-
-
-
 
 ## Les étapes de l'installation d'AdminLTE
 
