@@ -6,15 +6,44 @@ order: 5
 
 # Initialisation de l'application
 
-
+## Table des matières
+- [Initialisation de l'application](#initialisation-de-lapplication)
+  - [Table des matières](#table-des-matières)
+  - [Travail à faire](#travail-à-faire)
+  - [Critères de validation](#critères-de-validation)
+  - [Les étapes de l'installation d'AdminLTE](#les-étapes-de-linstallation-dadminlte)
 
 ## Travail à faire
 
 * Création d'un projet Laravel
 * Installation d'AdminLTE
+<<<<<<< HEAD
 
 ## Les étapes de l'installation d'AdminLTE
 
+=======
+* Rédaction du fichier README
+* Configuration de Laravel pour utiliser Vite
+
+
+## Critères de validation
+
+* Le projet Laravel est fonctionnel.
+* AdminLTE est correctement installé et configuré.
+* Le fichier README est clair et complet.
+* Les fonctionnalités de base d'AdminLTE sont implémentées.
+* Le design est adapté aux besoins du projet.
+
+## Les étapes de l'installation d'AdminLTE
+
+**1. Installation des prérequis**
+
+* Node.js
+* NPM
+* PHP 7.2.5 ou supérieur
+* Un serveur web (Apache, Nginx, etc.)
+
+>>>>>>> parent of d6e8276 (up)
 **2. Création d'un projet Laravel**
 
 ```bash
@@ -55,6 +84,40 @@ npm install
 npm run dev
 ```
 
+<<<<<<< HEAD
+=======
+**7. Configuration de Laravel pour utiliser Vite**
+
+Ouvrez votre fichier de mise en page Laravel (par exemple, `resources/views/layouts/app.blade.php`) et incluez les assets Vite :
+
+```html
+@vite(['my-vite-project/src/main.js'])
+```
+
+Assurez-vous d'ajuster le chemin en fonction de la structure de votre projet.
+
+**8. Lancer le serveur de développement Laravel**
+
+Démarrez le serveur de développement Laravel pour prévisualiser votre application.
+
+```bash
+php artisan serve
+```
+
+**9. Configuration de la base de données**
+
+Si nécessaire, configurez la connexion à la base de données dans le fichier `.env`.
+
+**10. Utilisation d'AdminLTE**
+
+Utilisez les templates et les composants d'AdminLTE dans vos vues Blade.
+
+**11. Adaptation du design**
+
+Modifier les variables CSS d'AdminLTE ou créer votre propre thème pour adapter le design aux besoins du projet.
+
+
+>>>>>>> parent of d6e8276 (up)
 **Ressources utiles**
 
 * Documentation d'AdminLTE : [https://adminlte.io/docs/3.1/](https://adminlte.io/docs/3.1/)
