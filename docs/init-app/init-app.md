@@ -59,9 +59,6 @@ npm install
 npm run dev
 ```
 
-
-
-
 **Ressources utiles**
 
 * Documentation d'AdminLTE : [https://adminlte.io/docs/3.1/](https://adminlte.io/docs/3.1/)
