@@ -6,8 +6,6 @@ order: 11
 
 # Initialisation de l'application
 
-
-
 <!-- note -->
 
 ## Travail à faire
