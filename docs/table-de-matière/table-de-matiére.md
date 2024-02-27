@@ -13,8 +13,10 @@ order: 0
 - [Analyse](#analyse)
 - [Diagramme de class](#diagramme-de-class)
 - [Diagramme de packages](#diagramme-de-packages)
-- [Programmation générique](#programmation-générique)
 - [Initialisation de l'application](#initialisation-de-lapplication)
 - [Maquettes](#maquettes)
+- [autoformations-backend](#autoformations-backend)
+- [autoformations-frontend](#autoformations-frontend)
+- [autoformations-test](#autoformations-test)
 - [Conclusion](#conclusion)
   
