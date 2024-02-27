@@ -6,5 +6,4 @@ order: 0
 
 # Table de matière
 
-
 <!-- new slide -->
