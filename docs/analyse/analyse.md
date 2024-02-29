@@ -14,4 +14,4 @@ order: 6
 <!-- note -->
 Dans la phase de l'analyse de notre processus de développement , nous utilisons des techniques telles que   l'utilisation d'UML, notamment le diagramme de cas d'utilisation, nous aide à clarifier et à structurer ces besoins.
 
-
+<!-- new slide -->
