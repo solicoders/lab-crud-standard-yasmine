@@ -9,7 +9,7 @@ order: 1
 *Introduction*
 
 <!-- note -->
-- Ce 'lab crud laravel standard' en y ajoutant les opérations CRUD pour les châpitre, la pagination, la recherche (AJAX), l'implémentation du pattern Repository, l'affichage des autoformations, le filtrage par autoformations, ainsi que l'intégration de données d'exemple (jeux de test).
+- Ce 'lab crud laravel standard' en y ajoutant les opérations CRUD pour les châpitre, la pagination, la recherche (AJAX), l'implémentation du pattern Repository, l'affichage des autoformations, le filtrage par autoformations, ainsi que l'intégration de données d'exemple(jeux de test).
 
 - Nous avons décidé de réaliser ce lab pour  valider des compétences spécifiques.
   
