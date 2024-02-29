@@ -1,29 +1,30 @@
 ---
 layout: default
 chapitre: maquettes
-order: 9
+order: 10
 ---
 
 # Maquettes
-{:class="sectionHeader"}
+
+
 <!-- new slide -->
 
 ## Login
 
-![login](/lab-crud-standard-yasmine/maquettes/images/login.png){:width="1000px"}*figure: login*
+![login](/lab-crud-standard-yasmine/maquettes/images/login.png){:width="1300px"}*figure: login*
 
 <!-- new slide -->
 
 ## Page d'accueil
 
-![index](/lab-crud-standard-yasmine/maquettes/images/index-autoformations.png){:width="1000px"}*figure: index*
+![index](/lab-crud-standard-yasmine/maquettes/images/index-autoformations.png){:width="1300px"}*figure: index*
 
 
 <!-- new slide -->
 
 ## More detaills
 
-![Plus d'informations](/lab-crud-standard-yasmine/maquettes/images/more-details.png){:width="1000px"}*figure: Plus d'information*
+![Plus d'informations](/lab-crud-standard-yasmine/maquettes/images/more-details.png){:width="1300px"}*figure: Plus d'information*
 
 <!-- new slide -->
 
@@ -33,7 +34,7 @@ order: 9
 
 <!-- new slide -->
 
-## Modifier
-![Modifier](/lab-crud-standard-yasmine/maquettes/images/modifier.png){:width="850px"}*figure: modifier*
+## Modifeir
+![Modifier](/lab-crud-standard-yasmine/maquettes/images/modifier.png){:width="1300px"}*figure: modifier*
 
 <!-- new slide -->
