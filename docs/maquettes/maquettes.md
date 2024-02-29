@@ -5,7 +5,6 @@ order: 9
 ---
 # Maquettes
 {:class="sectionHeader"}
-
 <!-- new slide -->
 
 ## Login
