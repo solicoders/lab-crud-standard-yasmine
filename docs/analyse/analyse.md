@@ -1,7 +1,7 @@
 ---
 layout: default
 chapitre: analyse
-order: 6
+order: 5
 ---
 # Analyse
 {:class="sectionHeader"}
