@@ -1,6 +1,6 @@
 ---
 layout: default
-chapitre: Table de matière
+chapitre: table de matière
 order: 0
 ---
 
@@ -20,3 +20,4 @@ order: 0
 - [autoformations-test](#autoformations-test)
 - [Conclusion](#conclusion)
   
+  <!-- new slide -->
