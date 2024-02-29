@@ -13,4 +13,3 @@ order: 7
 Ce chapitre présente le diagramme de classe de l'application ainsi que des maquettes représentant son interface utilisateur. Le diagramme de classe offre une visualisation structurée des différentes classes et de leurs relations au sein de l'application
 
 <!-- new slide -->
- 
