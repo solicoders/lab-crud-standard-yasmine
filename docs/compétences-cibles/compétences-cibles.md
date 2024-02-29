@@ -4,7 +4,6 @@ chapitre: Compétences cibles
 order: 4
 
 ---
-
 # Compétences cibles
 
 ![Compétences](/lab-crud-standard-yasmine/compétences-cibles/images/Compétences-cibles.png)
