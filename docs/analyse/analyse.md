@@ -3,9 +3,8 @@ layout: default
 chapitre: analyse
 order: 6
 ---
-<!-- new slide -->
 # Analyse
-
+{:class="sectionHeader"}
 <!-- new slide -->
 
 ## Cas d'utilisation
