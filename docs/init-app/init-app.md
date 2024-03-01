@@ -3,7 +3,6 @@ layout: default
 chapitre: init-app
 order: 8
 ---
-<!-- new slide -->
 # Initialisation de l'application
 <!-- note -->
 * Création d'un projet Laravel
