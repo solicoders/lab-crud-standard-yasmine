@@ -5,7 +5,7 @@ order: 8
 ---
 # Diagramme de packages
 
-![Diagramme de packages](/lab-crud-standard-yasmine/Diagramme-de-packages/images/Diagramme-des-paquetages.png){:width="900px"}*figure: Diagramme de packages*
+![Diagramme de packages](/lab-crud-standard-yasmine/Diagramme de packages/images/Diagramme-des-paquetages.png){:width="900px"}*figure: Diagramme de packages*
 
 <!-- note -->
 
@@ -14,6 +14,6 @@ order: 8
 - Relation : **<<import>>** : La relation "<<import>>" entre le package Châpitres et le package Autoformations signifie que le package Châpitres importe des éléments du package Autoformations.
 
 download file Diagramme de packages :
- - [Diagramme de packages](/lab-crud-standard-yasmine/Diagramme-de-packages/Diagramme-de-packages.fig "download")
+ - [Diagramme de packages](/lab-crud-standard-yasmine/Diagramme de packages/Diagramme-de-packages.fig "download")
 
 <!-- new slide -->
