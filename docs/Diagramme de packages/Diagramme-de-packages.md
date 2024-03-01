@@ -9,7 +9,7 @@ order: 7
 
 <!-- note -->
 
-- Package **Autoformations** : Il s'agit d'un package (ou module) au sein du système logiciel qui contient vraisemblablement des classes de modèle et de contrôleur, des éléments de base de données, des interfaces ou d'autres composants liés à des Autoformations .
+- Package **Autoformations** : Il s'agit d'un package (ou module) au sein du système logiciel qui contient vraisemblablement des classes de modèle et de contrôleur, des éléments de base de données, des interfaces ou d'autres composants liés à des Autoformations.
 - Package **Châpitres** : Il s'agit d'un package (ou module) au sein du système logiciel qui contient vraisemblablement des classes de modèle et de contrôleur, des éléments de base de données, des interfaces ou d'autres composants liés à des tâches.
 - Relation : **<<import>>** : La relation "<<import>>" entre le package Châpitres et le package Autoformations signifie que le package Châpitres importe des éléments du package Autoformations.
 
