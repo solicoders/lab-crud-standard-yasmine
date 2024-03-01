@@ -1,15 +1,13 @@
 ---
 layout: default
 chapitre: conclusion
-order: 8
+order: 22
 ---
-<!-- new slide -->
-
 # Conclusion
 
-![Introduction](./images/introduction.png){:width="500px" }
-*Introduction*
+![Introduction](/lab-crud-standard-yasmine/conclusion/images/conclusion.jpg){:width="500px" }
+*conclusion*
 <!-- note -->
 
-En conclusion, ce laboratoire sur Laravel Basic a permis d'enrichir notre application en y intégrant des fonctionnalités essentielles pour une gestion efficace des tâches. L'ajout des opérations CRUD pour les tâches a fourni une structure solide pour la manipulation des données. La pagination et la recherche AJAX ont amélioré l'expérience utilisateur en permettant une navigation fluide et une recherche rapide au sein de la liste des tâches.
+En conclusion, ce rapport a illustré de manière concise et claire notre approche de mise en œuvre des opérations CRUD à travers l'utilisation du pattern Repository pour le backend. En adoptant cette méthodologie, nous avons pu concevoir une architecture logicielle efficace et sécurisée, démontrant ainsi notre compétence en développement backend.
 
