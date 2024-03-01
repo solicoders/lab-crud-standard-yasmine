@@ -9,7 +9,6 @@ order: 8
 * Création d'un projet Laravel
 * Installation d'AdminLTE
   
-
 ## Les étapes de l'installation d'AdminLTE
 
 **2. Création d'un projet Laravel**
