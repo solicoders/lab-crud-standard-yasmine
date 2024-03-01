@@ -1,7 +1,7 @@
 ---
 layout: default
 chapitre: Diagramme de packages
-order: 8
+order: 7
 ---
 # Diagramme de packages
 
