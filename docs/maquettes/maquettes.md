@@ -17,7 +17,6 @@ order: 9
 
 ![index](/lab-crud-standard-yasmine/maquettes/images/index-chapitre.png){:width="1000px"}*figure: index*
 
-
 <!-- new slide -->
 
 ## More detaills
