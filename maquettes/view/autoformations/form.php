@@ -11,16 +11,7 @@
                                                 <input name="description" type="text" class="form-control" id="description" placeholder="Description de la formation" value="Formation avancée sur le framework Laravel">
                                             </div>
                                            
-                                            <div class="form-group">
-                                                <label for="nombreChapitres">Nombre chapitres</label>
-                                                <input name="nombreChapitres" type="number" class="form-control" id="nombreChapitres" value="27">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="reference">Reference</label>
-                                                <input name="reference" type="url" class="form-control" id="reference" placeholder="Entrez la référence" pattern="https://.*" value="https://grafikart.fr/formations/laravel">
-                                                <small id="referenceHelp" class="form-text text-muted">Entrez un lien URL valide (commençant par https://).</small>
-                                            </div>
+                                        
 
                                             <div class="form-group">
                                                 <label for="startDate">Date début</label>
