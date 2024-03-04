@@ -9,7 +9,7 @@ order: 9
 
 ## Login
 
-![login](/lab-crud-standard-yasmine/maquettes/images/login.png){:width="1000px"}*figure: login*
+![login](/lab-crud-standard-yasmine/maquettes/images/login.png){:width="999px"}*figure: login*
 
 <!-- new slide -->
 
@@ -32,7 +32,7 @@ order: 9
 
 <!-- new slide -->
 
-## Modifeir
+## Modifier
 ![Modifier](/lab-crud-standard-yasmine/maquettes/images/modifier.png){:width="850px"}*figure: modifier*
 
 <!-- new slide -->
