@@ -20,4 +20,5 @@ class AutoFormation extends Model
     public function Chapitre(){
         return $this ->hasMany(Chapitre::class);
     }
+    
 }
