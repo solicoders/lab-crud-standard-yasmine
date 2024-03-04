@@ -3,7 +3,6 @@
 namespace App\Repositories\chapitres;
 
 use App\Models\chapitres\Chapitre;
-use App\Models\chapitres\Chapitres;
 use App\Repositories\BaseRepository;
 use Database\Seeders\chapitres\chapitresSeeders;
 use Illuminate\Database\Eloquent\Model;
