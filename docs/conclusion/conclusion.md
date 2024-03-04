@@ -5,7 +5,7 @@ order: 22
 ---
 # Conclusion
 
-![Introduction](/lab-crud-standard-yasmine/conclusion/images/conclusion.jpg){:width="850px" }
+![Introduction](/lab-crud-standard-yasmine/conclusion/images/conclusion.jpg){:width="850px"}
 *conclusion*
 <!-- note -->
 
