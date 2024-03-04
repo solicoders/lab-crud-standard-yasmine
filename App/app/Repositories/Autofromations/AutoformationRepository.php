@@ -2,8 +2,8 @@
 
 namespace App\Repositories\Autofromations;
 
-use App\Models\AutoFormation;
-use App\Repository\Repositories\BaseRepository;
+use App\Models\Autoformations\AutoFormation;
+use App\Repositories\BaseRepository;
 use Database\Seeders\Autoformations;
 use Illuminate\Database\Eloquent\Model;
 

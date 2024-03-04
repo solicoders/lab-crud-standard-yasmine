@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repository\Repositories;
+namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,19 +15,18 @@ abstract class  BaseRepository {
     return $this ->model->create($validatedata);
   }
 
-  public function update($validatedata){
-    return $this->model->update($validatedata) ;
+  public function update($validatedata,$id){
+    $findItem = $this->model->find($id);
+    return $findItem->update($validatedata);
   }
 
   public function paginatedData($perpage){
      return $this ->model->paginate($perpage);
   }
    
-  public function destroy($record){
-   
-    $todestroy =  $this->model->find( $record->id);
-    return $todestroy -> delete();
-
-  }
+  public function destroy($id){
+    $toDelete = $this->model->find($id);
+    return $toDelete->delete();
+}
 
 }
