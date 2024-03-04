@@ -15,8 +15,7 @@ order: 9
 
 ## Page d'accueil
 
-![index](/lab-crud-standard-yasmine/maquettes/images/index-autoformations.png){:width="1000px"}*figure: index*
-
+![index](/lab-crud-standard-yasmine/maquettes/images/index-chapitre.png){:width="1000px"}*figure: index*
 
 <!-- new slide -->
 
