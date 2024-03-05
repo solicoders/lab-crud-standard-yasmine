@@ -30,7 +30,7 @@ Route::get('/test/store', function () {
 
     $insert = $repository->store($data);
     if($insert){
-        echo 'Insertion réussie';
+        echo 'Insertion réussie now';
     }else{
         echo 'Insertion n\'est pas réussite';
     }
@@ -39,7 +39,7 @@ Route::get('/test/store', function () {
 Route::get('/test/update', function () {
     $repository = new AutoformationRepository(new AutoFormation);
     $validatedata = [
-        'name' => 'yasmine' ,
+        'name' => 'ana' ,
         'description' => 'nonoooooooooooo', 
         'date_debut' => '2024-03-04 13:11:49',
         'date_de_fin' => '2024-03-04 13:11:49'
