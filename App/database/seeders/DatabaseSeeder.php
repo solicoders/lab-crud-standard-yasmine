@@ -6,7 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 use Database\Seeders\GestionAutoFormations\{
-    AutoformationsSeeder,
+    AutoformationsSeeder,ChapitresSeeder
 };
 
 class DatabaseSeeder extends Seeder
@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
         {
             $classes = [];
             $classes = array_merge(
-                GestionAutoFormations::Classes()
+                GestionAutoFormations::Classes(),
+                GestionChapitres::Classes()
             );
             $this->call($classes);
     
