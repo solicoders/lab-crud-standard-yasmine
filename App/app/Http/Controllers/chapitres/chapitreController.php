@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\chapitres;
 use App\Http\Controllers\Controller;
-use App\Repositories\chapitres\ChapitreRepository;
-
+use App\Repositories\autoformations\ChapitreRepository;
+use App\Repositories\autoformations\AutoformationRepository;
 use App\Http\Requests\chapitres\chapitreRequest;
 use Illuminate\Http\Request;
 
@@ -28,17 +28,20 @@ class chapitreController extends Controller
      */
     public function create()
     {
-        //
+    
+        return view('GestionAutoformations.autoformations.create');
+       
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store($data)
     {
-        //
+        
+        $Chapitre = $this->ChapitreRepository->create($data);
+        return view('GestionAutoformations.autoformations.index');
     }
-
     /**
      * Display the specified resource.
      */
