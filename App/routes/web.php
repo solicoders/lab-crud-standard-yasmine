@@ -25,7 +25,8 @@ Route::get('/test/store', function () {
         'name' => 'yasmine' ,
         'description' => 'nonoooooooooooo', 
         'date_debut' => '2024-03-04 13:11:49',
-        'date_de_fin' => '2024-03-04 13:11:49'
+        'date_de_fin' => '2024-03-04 13:11:49',
+        'autoformationId' => 2
     ];
 
     $insert = $repository->store($data);
@@ -42,7 +43,8 @@ Route::get('/test/store', function () {
 //         'name' => 'yasmine' ,
 //         'description' => 'nonoooooooooooo', 
 //         'date_debut' => '2024-03-04 13:11:49',
-//         'date_de_fin' => '2024-03-04 13:11:49'
+//         'date_de_fin' => '2024-03-04 13:11:49',
+            //  'autoformationId' => 2
 //     ];
 
 //     $insert = $repository->update($validatedata , 1);

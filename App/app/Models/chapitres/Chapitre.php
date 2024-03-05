@@ -14,7 +14,8 @@ class Chapitre extends Model
         'name' ,
           'description', 
           'date_debut',
-          'date_de_fin'
+          'date_de_fin',
+          'autoformationId'
 
     ];
 
