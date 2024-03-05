@@ -7,18 +7,26 @@ namespace Database\Seeders;
 use Database\Seeders\chapitres\chapitresSeeder;
 use Illuminate\Database\Seeder;
 
+use Database\Seeders\GestionAutoFormations\{
+    AutoformationsSeeder,
+};
+
 class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
      */
-    public function run(): void
-    {
-        // \App\Models\User::factory(10)->create();
-$this->call(chapitresSeeder::class);
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-    }
+   
+        public function run(): void
+        {
+            $classes = [];
+            $classes = array_merge(
+                GestionAutoFormations::Classes()
+            );
+            $this->call($classes);
+    
+    
+           
+        }
+    
 }
