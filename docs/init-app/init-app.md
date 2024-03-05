@@ -4,12 +4,10 @@ chapitre: init-app
 order: 8
 ---
 # Initialisation de l'application
-<!-- note -->
-* Création d'un projet Laravel
-* Installation d'AdminLTE
-  
-## Les étapes de l'installation d'AdminLTE
 
+-  Création d'un projet Laravel
+-  Installation d'AdminLTE
+  
 **2. Création d'un projet Laravel**
 
 ```bash
