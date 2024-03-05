@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Database\Seeders\autoformations\AutoformationsSeeder;
 use Illuminate\Database\Seeder;
 
 use Database\Seeders\GestionChapitres\{
