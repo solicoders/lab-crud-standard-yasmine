@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repositories\autofromations;
+namespace App\Repositories\autoformations;
 
 use App\Models\autoformations\AutoFormation;
 use App\Repositories\BaseRepository;
-use Database\Seeders\Autoformations;
+use Database\Seeders\autoformations;
 use Illuminate\Database\Eloquent\Model;
 
 class  AutoformationRepository extends BaseRepository {

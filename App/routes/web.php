@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\autoformations\AutoFormation;
-use App\Repositories\Autofromations\AutoformationRepository;
+use App\Repositories\autoformations\AutoformationRepository;
 use Illuminate\Support\Facades\Route;
 
 /*
