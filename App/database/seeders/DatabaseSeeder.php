@@ -6,7 +6,6 @@ namespace Database\Seeders;
 
 use Database\Seeders\chapitres\chapitresSeeder;
 use Illuminate\Database\Seeder;
-use Database\Seeders\chapitres;
 use Database\Seeders\autoFormations\{
     AutoformationsSeeder,ChapitresSeeder
 };
