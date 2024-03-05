@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('chapitres.index');
 });
 
-Route::get('/test/store', function () {
+Route::get('/test/store-chapitre', function () {
     $repository = new ChapitreRepository(new Chapitre);
     $data = [
         'name' => 'yasmine' ,
@@ -37,7 +37,7 @@ Route::get('/test/store', function () {
     }
 });
 
-Route::get('/test/update', function () {
+Route::get('/test/update-chapitre', function () {
     $repository = new ChapitreRepository(new Chapitre);
     $validatedata = [
         'name' => 'yasmine' ,
