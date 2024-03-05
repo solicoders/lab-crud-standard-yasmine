@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories\Autofromations;
+namespace App\Repositories\autofromations;
 
-use App\Models\Autoformations\AutoFormation;
+use App\Models\autoformations\AutoFormation;
 use App\Repositories\BaseRepository;
 use Database\Seeders\Autoformations;
 use Illuminate\Database\Eloquent\Model;
