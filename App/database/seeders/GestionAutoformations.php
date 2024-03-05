@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Symfony\Component\Uid\NilUuid;
 
-use Database\Seeders\GestionAutoFormations\{
+use Database\Seeders\autoFormations\{
     AutoformationsSeeder,
 };
 
