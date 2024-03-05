@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\chapitres;
 use App\Http\Controllers\Controller;
 use App\Repositories\chapitres\ChapitreRepository;
+
 use App\Http\Requests\chapitres\chapitreRequest;
 use Illuminate\Http\Request;
 
