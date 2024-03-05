@@ -4,17 +4,25 @@ chapitre: prérequis
 order: 4
 ---
 # Prérequis 
-
 Les prérequis comprend les étapes suivantes :
 {:class="hiddenPresentation"}
 
-- Planification des tâches à effectuer
-- Maquettage des différentes pages de l'application
+- Autoformation laravel :
+  - Routing
+  - ORM Eloquent
+  - Controllers
+  - Moteur de template Blade
+  - Valider les données
+  - Model binding
+  - Debugbar et IDE Helper
+  - Les formulaires
+  - Les Relation
+- Les Labs :
+  - Lab crud laravel basic
+- Collaboration Niveau d'imitation
+  - Rédaction du rapport
+  - Préparation de la présentation
 - Conception logicielle sous forme de diagrammes UML 
-- Conception de la base de données 
-- Codage et réalisation et test
-- Rédaction du rapport
-- Préparation de la présentation
-
 <!-- new slide -->
+
 
