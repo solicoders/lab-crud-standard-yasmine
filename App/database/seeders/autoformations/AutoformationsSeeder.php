@@ -35,7 +35,6 @@ class AutoformationsSeeder extends Seeder
             // Add more dummy data as needed
         ];
 
-        // Insert data into the autoformations table
         foreach ($autoformations as $formation) {
             DB::table('autoformations')->insert($formation);
         }
