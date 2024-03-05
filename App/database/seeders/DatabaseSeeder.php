@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Database\Seeders\chapitres;
 use Database\Seeders\autoFormations\{
     AutoformationsSeeder,ChapitresSeeder
 };
