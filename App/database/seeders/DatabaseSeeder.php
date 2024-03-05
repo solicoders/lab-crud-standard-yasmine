@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         {
             $classes = [];
             $classes = array_merge(
-                GestionChapitres::Classes()
+                GestionAutoFormations::Classes()
             );
             $this->call($classes);
     
