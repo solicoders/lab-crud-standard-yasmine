@@ -4,16 +4,6 @@ chapitre: prérequis
 order: 4
 ---
 # Prérequis 
-
-Les prérequis comprend les étapes suivantes :
-{:class="hiddenPresentation"}
-
----
-layout: default
-chapitre: prérequis
-order: 3
----
-# Prérequis 
 Les prérequis comprend les étapes suivantes :
 {:class="sectionHeader"}
 
