@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\autoformations\AutoFormation;
-use App\Repositories\autoformations\AutoformationRepository;
+use App\Models\chapitres\Chapitre;
+use  App\Repositories\chapitres\ChapitreRepository;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test/store', function () {
-    $repository = new AutoformationRepository(new AutoFormation);
+    $repository = new ChapitreRepository(new Chapitre);
     $data = [
         'name' => 'yasmine' ,
         'description' => 'nonoooooooooooo', 
@@ -30,37 +30,37 @@ Route::get('/test/store', function () {
 
     $insert = $repository->store($data);
     if($insert){
-        echo 'Insertion réussie now';
+        echo 'Insertion réussie';
     }else{
         echo 'Insertion n\'est pas réussite';
     }
 });
 
-Route::get('/test/update', function () {
-    $repository = new AutoformationRepository(new AutoFormation);
-    $validatedata = [
-        'name' => 'ana' ,
-        'description' => 'nonoooooooooooo', 
-        'date_debut' => '2024-03-04 13:11:49',
-        'date_de_fin' => '2024-03-04 13:11:49'
-    ];
+// Route::get('/test/update', function () {
+//     $repository = new ChapitreRepository(new Chapitre);
+//     $validatedata = [
+//         'name' => 'yasmine' ,
+//         'description' => 'nonoooooooooooo', 
+//         'date_debut' => '2024-03-04 13:11:49',
+//         'date_de_fin' => '2024-03-04 13:11:49'
+//     ];
 
-    $insert = $repository->update($validatedata , 1);
-    if($insert){
-        echo 'update réussie';
-    }else{
-        echo 'Insertion n\'est pas réussite';
-    }
-});
+//     $insert = $repository->update($validatedata , 1);
+//     if($insert){
+//         echo 'update réussie';
+//     }else{
+//         echo 'Insertion n\'est pas réussite';
+//     }
+// });
 
-Route::get('/test/{id}', function ($id) {
-    $repository = new AutoformationRepository(new AutoFormation);
-    $delete = $repository->destroy($id);
-    if($delete){
-        echo 'delete réussie';
-    }else{
-        echo 'delete n\'est pas réussite';
-    }
-});
+// Route::get('/test/{id}', function ($id) {
+//     $repository = new ChapitreRepository(new Chapitre);
+//     $delete = $repository->destroy($id);
+//     if($delete){
+//         echo 'delete réussie';
+//     }else{
+//         echo 'delete n\'est pas réussite';
+//     }
+// });
 
 
