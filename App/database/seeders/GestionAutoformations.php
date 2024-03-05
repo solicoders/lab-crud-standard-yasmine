@@ -5,23 +5,23 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Symfony\Component\Uid\NilUuid;
 
-use Database\Seeders\GestionChapitres\{
-    chapitresSeeder,
+use Database\Seeders\GestionAutoFormations\{
+    AutoformationsSeeder,
 };
 
 
-class GestionChapitres extends Seeder
+class GestionAutoFormations extends Seeder
 {
 
     public function run(): void
     {
-        $this->call(GestionChapitres::Classes());
+        $this->call(GestionAutoFormations::Classes());
     }
 
     public static function Classes(): array
     {
         return  [
-            chapitresSeeder::class,
+            AutoformationsSeeder::class,
         ];
     }
 }
