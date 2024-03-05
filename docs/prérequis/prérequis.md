@@ -15,7 +15,7 @@ order: 3
 ---
 # Prérequis 
 Les prérequis comprend les étapes suivantes :
-{:class="hiddenPresentation"}
+{:class="sectionHeader"}
 
 - Autoformation laravel :
   - Routing
