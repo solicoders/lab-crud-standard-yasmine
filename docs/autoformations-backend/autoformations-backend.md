@@ -8,7 +8,6 @@ order: 10
 ![autoformations-backend](/lab-crud-standard-yasmine/autoformations-backend/images/backend.jpg)*Figure:backend*{:width="1000px"}
 <!-- note -->
 Dans la section dédiée aux Autoformations, nous élaborerons une plateforme pour la gestion efficace des Autoformations, démontrant ainsi notre expertise en Laravel. Cette démarche nous permettra de mettre en pratique nos compétences en développement back-end, tout en garantissant une approche professionnelle et efficace dans la gestion de nos Autoformations .
-
 ## Les commands 
 
 
