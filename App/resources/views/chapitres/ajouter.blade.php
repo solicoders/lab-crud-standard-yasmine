@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
+@extends('layouts.layout')
 
-<!-- Inclusion de l'en-tête -->
-<?php include_once "../layouts/heade.php" ?>
 
-<body class="sidebar-mini" style="height: auto;">
 
-    <div class="wrapper">
-        <!-- Navigation -->
-        <?php include_once "../layouts/nav.php" ?>
-        <!-- Barre latérale -->
-        <?php include_once "../layouts/aside.php" ?>
-
-        <div class="content-wrapper pt-4" style="min-height: 1302.4px;">
-
-            <div class="content-header">
-
-            </div>
-
+    
+@section('content')
             <section class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -29,6 +15,7 @@
                                 </div>
                                 <!-- Inclusion du formulaire -->
                                 <?php include_once "./form.php" ?>
+                                @include('layouts.aside')
                             </div>
 
                         </div>

@@ -1,7 +1,6 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="content-wrapper" style="min-height: 1302.4px;">
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -33,17 +32,11 @@
                     <div class="card">
                         <div class="card-header col-md-12">
                             <div class="d-flex justify-content-between">
-                                {{-- <div class="btn-group mr-3">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa-solid fa-filter text-dark pr-2 border-right"></i>
-                                        <input type="hidden" name="chapitreId" id="chapitreId"
-                                            value="{{$chapitres->id }}">
-                                        {{ $chapitres->name }}
-                                    </button>
+                                <div class="btn-group mr-3">
+                                   
                                     <div class="dropdown-menu">
-
-                                    </div> --}}
+                                      
+                                    </div>
                                 </div>
 
 
@@ -120,5 +113,4 @@
         </div>
         <input type="hidden" id='page' value="1">
     </section>
-</div>
 @endsection

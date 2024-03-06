@@ -31,7 +31,7 @@ class ChapitreController extends Controller
      */
     public function create()
     {
-        $chapitres = $this->ChapitresRepository->getAll(); 
+        $chapitres = $this->ChapitresRepository->getall(); 
         
         return view('chapitres.create',Compact('chapitres'));
        
