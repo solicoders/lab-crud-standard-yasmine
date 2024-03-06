@@ -39,8 +39,8 @@ class ChapitreController extends Controller
         $projetId= $request ->projetId ;
 
         if($projetId) {
-            $project = $this->AutoformationsRepository->find($projetId);
-            $Tasks = $this->ChapitresRepository->getTaskbyprojetId($projetId);
+            $project = $this->AutoformationsRepository->find($autoformationId);
+            $Tasks = $this->ChapitresRepository->getChapitrebyautoformationId($autoformationId);
             return view("Taches.index",Compact('Tasks','projects', 'project'));
             // dd($tasks);
         }
