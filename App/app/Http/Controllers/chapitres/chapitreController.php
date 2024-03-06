@@ -7,16 +7,18 @@ use App\Repositories\autoformations\AutoformationRepository;
 use App\Http\Requests\chapitres\chapitreRequest;
 use Illuminate\Http\Request;
 
-class chapitreController extends Controller
+class ChapitreController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
 
-    protected $chapitreRepository ;
-    public function __construct(ChapitreRepository $chapitreRepository ) {
-        $this->ChapitreRepository = $ChapitreRepository;
-    }
+     protected $ChapitresRepository;
+     protected $AutoformationsRepository;
+     public function __construct(ChapitreRepository $ChapitresRepository, AutoformationRepository $AutoformationsRepository ){
+         $this->ChapitreRepository = $ChapitresRepository;
+         $this->AutoformationRepository = $AutoformationsRepository;
+     }
 
     public function index()
     {
