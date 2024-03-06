@@ -4,7 +4,17 @@
         @method('PUT')
     @endif
     <div class="card-body">
+
         <div class="form-group">
+            <label>Custom Select</label>
+            <select class="custom-select" name="autoformation_id">
+                @foreach($autoformations as $autoformation)
+                    <option value="{{ $autoformation->id }}">{{ $autoformation->name }}</option>
+                @endforeach
+            </select>
+            </div>
+        <div class="form-group">
+
             <label for="name">name</label>
             <input name="name" type="text" class="form-control" id="name" placeholder="Entrez le titre"
                 value="{{ isset($chapitres->id) ? $chapitres->name : '' }}">

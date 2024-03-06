@@ -32,9 +32,10 @@ class ChapitreController extends Controller
      */
     public function create()
     {
+        $autoformations= $this->AutoformationsRepository->getall();
         $chapitres = $this->ChapitresRepository->getall(); 
         
-        return view('chapitres.create',Compact('chapitres'));
+        return view('chapitres.create',Compact('chapitres','autoformations')) ;
        
     }
 
