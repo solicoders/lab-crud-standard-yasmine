@@ -23,4 +23,11 @@ public function searchData($searchdata , $perpage=4){
   }) ->paginate($perpage);
 
 }
+
+public function  getChapitrebyautoformationId($autoformationId){
+  return $this->model->where('autoformationId', $autoformationId)->paginate(4);
+   
+ }
+
+
 }
