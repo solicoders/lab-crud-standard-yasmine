@@ -20,6 +20,6 @@ class Chapitre extends Model
     ];
 
     public Function chapitre(){
-    return $this ->belongsTo(AutoFormation::class);
+    return $this ->belongsTo(AutoFormation::class,'autoformationId');
     }
 }
