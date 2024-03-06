@@ -46,7 +46,7 @@ class ChapitreController extends Controller
     {
         
         $this->ChapitresRepository->store($request->all());
-        return redirect()->route('chapitre.index')->with('success', 'Chapitre a été ajouté avec succès.');
+        return redirect()->route('chapitres.index')->with('success', 'Chapitre a été ajouté avec succès.');
 
     }
     /**
@@ -62,19 +62,20 @@ class ChapitreController extends Controller
      */
     public function edit(string $id)
     {
-        $dataToEdit = $this->ChapitresRepository->update($id);
-        $dataToEdit->date_debut = Carbon::parse($dataToEdit->date_debut)->format('Y-m-d');
-        $dataToEdit->date_de_fin = Carbon::parse($dataToEdit->date_de_fin)->format('Y-m-d');
-
-        return view('chapitres.edit', compact('dataToEdit'));
+        $autoformations = $this->AutoformationsRepository->getAll();
+        $chapitres = $this->ChapitresRepository->find($id);
+        $chapitres->date_debut = Carbon::parse( $chapitres->date_debut)->format('Y-m-d');
+        $chapitres->date_de_fin = Carbon::parse( $chapitres->date_de_fin)->format('Y-m-d');
+        return view('chapitres.edit', compact('chapitres', 'autoformations'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update($id, Request $request)
     {
-        //
+        $this->ChapitresRepository->update($request->all(),$id);
+        return redirect()->route('chapitres.index')->with('success', 'Question modifiée avec succès.');
     }
 
     /**

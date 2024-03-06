@@ -7,7 +7,7 @@
 
         <div class="form-group">
             <label>Custom Select</label>
-            <select class="custom-select" name="autoformation_id">
+            <select class="custom-select" name="autoformationId">
                 @foreach($autoformations as $autoformation)
                     <option value="{{ $autoformation->id }}">{{ $autoformation->name }}</option>
                 @endforeach
