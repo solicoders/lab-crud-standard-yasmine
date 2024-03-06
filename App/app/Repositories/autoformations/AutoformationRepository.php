@@ -22,5 +22,12 @@ public function searchData($searchdata , $perpage=4){
 
   }) ->paginate($perpage);
 
+
 }
+
+
+public function getall(){
+
+  return $this->model->all();
+ }
 }
