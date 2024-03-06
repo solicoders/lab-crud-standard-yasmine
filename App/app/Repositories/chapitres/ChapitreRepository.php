@@ -38,4 +38,9 @@ public function  getChapitrebyautoformationId($autoformationId){
 
  }
 
+ public function paginatedData($perpage = 4) {
+  return $this->model->with('chapitre')->paginate($perpage);
+
+ }
+
 }
