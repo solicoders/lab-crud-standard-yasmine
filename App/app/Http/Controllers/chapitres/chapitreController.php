@@ -41,10 +41,10 @@ class ChapitreController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store($data)
+    public function store(Request $request)
     {
-
-        $data = $this->ChapitresRepository->store($data);
+        
+        $this->ChapitresRepository->store($request->all());
         return redirect()->route('chapitre.index')->with('success', 'Chapitre a été ajouté avec succès.');
 
     }
