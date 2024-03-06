@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class  ChapitreRepository extends BaseRepository {
     protected $model;
-
  function __construct(Chapitre $Chapitre) {
     $this->model = $Chapitre;
 }
@@ -32,6 +31,11 @@ public function  getChapitrebyautoformationId($autoformationId){
  public function getall(){
 
   return $this->model->all();
+ }
+
+ public function find($id){
+  return $this->model->find($id);
+
  }
 
 }
