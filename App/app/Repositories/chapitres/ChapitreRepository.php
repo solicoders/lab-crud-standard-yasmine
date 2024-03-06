@@ -29,5 +29,9 @@ public function  getChapitrebyautoformationId($autoformationId){
    
  }
 
+ public function getall(){
+
+  return $this->model->all();
+ }
 
 }
