@@ -33,20 +33,20 @@ class ChapitreController extends Controller
             }
             return view('taches.search', compact('Tasks'))->render();
         } 
-        $projects = $this->AutoformationsRepository->index();
+        $autoformations = $this->AutoformationsRepository->index();
     
        
         $projetId= $request ->projetId ;
 
         if($projetId) {
-            $project = $this->ProjectsRepository->find($projetId);
-            $Tasks = $this->TasksRepository->getTaskbyprojetId($projetId);
+            $project = $this->AutoformationsRepository->find($projetId);
+            $Tasks = $this->ChapitresRepository->getTaskbyprojetId($projetId);
             return view("Taches.index",Compact('Tasks','projects', 'project'));
             // dd($tasks);
         }
-        $Tasks = $this->TasksRepository->index();
+        $Tasks = $this->ChapitresRepository->index();
         $task = $Tasks->first();
-        $project = $this->ProjectsRepository->find($task->projetId);
+        $project = $this->AutoformationsRepository->find($task->projetId);
         return view("Taches.index",Compact('Tasks', 'projects', 'project'));
 
     }
