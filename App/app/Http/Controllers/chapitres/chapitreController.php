@@ -22,9 +22,8 @@ class ChapitreController extends Controller
 
      public function index()
     {
-
-    $data =  $this->ChapitresRepository ->index();
-
+        $chapitres =  $this->ChapitresRepository ->paginatedData(4);
+    return view ('chapitres.index', compact('chapitres'));
     }
 
     /**
@@ -32,8 +31,9 @@ class ChapitreController extends Controller
      */
     public function create()
     {
-    
-        return view('GestionAutoformations.autoformations.create');
+        $chapitres = $this->ChapitresRepository->getAll(); 
+        
+        return view('chapitres.create',Compact('chapitres'));
        
     }
 
@@ -42,9 +42,10 @@ class ChapitreController extends Controller
      */
     public function store($data)
     {
-        
-        $Chapitre = $this->ChapitreRepository->create($data);
-        return view('GestionAutoformations.autoformations.index');
+
+        $data = $this->ChapitresRepository->store($data);
+        return redirect()->route('chapitre.index')->with('success', 'Chapitre a été ajouté avec succès.');
+
     }
     /**
      * Display the specified resource.

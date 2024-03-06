@@ -2,11 +2,12 @@
 
 
 
-use App\Http\Controllers\chapitres;
+use App\Http\Controllers\chapitres\ChapitreController;
 
 use Illuminate\Support\Facades\Route;
 
 
-Route::resource('projets' , projetController::class);
-Route::get('export', [projetController::class, 'export'])->name('projets.export');
-Route::post('import', [projetController::class, 'import'])->name('projets.import');
+Route::resource('chapitres' , ChapitreController::class);
+Route::get('/index', [ChapitreController::class, 'index'])->name('chapitres.index');
+Route::get('export', [ChapitreController::class, 'export'])->name('chapitres.export');
+Route::post('import', [ChapitreController::class, 'import'])->name('chapitres.import');
