@@ -23,10 +23,8 @@ class ChapitreController extends Controller
 
      public function index()
     {
-        
-        $chapitres =  $this->ChapitresRepository ->paginatedData(4);
-        dd($chapitres);
-    return view ('chapitres.index', compact('chapitres'));
+        $chapitres =  $this->ChapitresRepository->paginatedData(4);
+        return view ('chapitres.index', compact('chapitres'));
     }
 
     /**
