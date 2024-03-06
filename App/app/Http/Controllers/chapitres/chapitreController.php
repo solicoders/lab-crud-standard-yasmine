@@ -4,7 +4,8 @@ namespace App\Http\Controllers\chapitres;
 use App\Http\Controllers\Controller;
 use App\Repositories\chapitres\ChapitreRepository;
 use App\Repositories\autoformations\AutoformationRepository;
-use App\Http\Requests\chapitres\chapitreRequest;
+
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ChapitreController extends Controller
@@ -60,7 +61,11 @@ class ChapitreController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $dataToEdit = $this->ChapitresRepository->update($id);
+        $dataToEdit->date_debut = Carbon::parse($dataToEdit->date_debut)->format('Y-m-d');
+        $dataToEdit->date_de_fin = Carbon::parse($dataToEdit->date_de_fin)->format('Y-m-d');
+
+        return view('chapitres.edit', compact('dataToEdit'));
     }
 
     /**
