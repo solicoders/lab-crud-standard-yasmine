@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\chapitres;
 use App\Http\Controllers\Controller;
-use App\Repositories\autoformations\ChapitreRepository;
+use App\Repositories\chapitres\ChapitreRepository;
 use App\Repositories\autoformations\AutoformationRepository;
 use App\Http\Requests\chapitres\chapitreRequest;
 use Illuminate\Http\Request;
@@ -16,13 +16,39 @@ class ChapitreController extends Controller
      protected $ChapitresRepository;
      protected $AutoformationsRepository;
      public function __construct(ChapitreRepository $ChapitresRepository, AutoformationRepository $AutoformationsRepository ){
-         $this->ChapitreRepository = $ChapitresRepository;
-         $this->AutoformationRepository = $AutoformationsRepository;
+         $this->ChapitresRepository = $ChapitresRepository;
+         $this->AutoformationsRepository = $AutoformationsRepository;
      }
 
-    public function index()
+     public function index(Request $request)
     {
-        //
+
+        if ($request->ajax()) {
+            $searchQuery = $request->get('searchValue');
+            $searchQuery = str_replace(' ', '%', $searchQuery);
+
+            $Chapitres = $this->ChapitresRepository->searchData($searchQuery);
+            if (!$Chapitres -> count()) {
+                return 'false' ; 
+            }
+            return view('taches.search', compact('Tasks'))->render();
+        } 
+        $projects = $this->AutoformationsRepository->index();
+    
+       
+        $projetId= $request ->projetId ;
+
+        if($projetId) {
+            $project = $this->ProjectsRepository->find($projetId);
+            $Tasks = $this->TasksRepository->getTaskbyprojetId($projetId);
+            return view("Taches.index",Compact('Tasks','projects', 'project'));
+            // dd($tasks);
+        }
+        $Tasks = $this->TasksRepository->index();
+        $task = $Tasks->first();
+        $project = $this->ProjectsRepository->find($task->projetId);
+        return view("Taches.index",Compact('Tasks', 'projects', 'project'));
+
     }
 
     /**
