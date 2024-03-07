@@ -22,7 +22,9 @@ class chapitreRequest extends FormRequest
     public function rules(): array
     {
        return [
-        'nom' => 'required',
+        'name' => 'required',
+        'description'=>'nullable',
+        'autoformationId'=>'numeric|required'
     ];
     }
 }
