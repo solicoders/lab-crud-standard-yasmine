@@ -22,7 +22,7 @@
                             <h1>Détails du châpitre</h1>
                         </div>
                         <div class="col-sm-6">
-                            <a href="./edit.php" class="btn btn-default float-right"><i class="far fa-edit"></i> Modifier</a>
+                            <a href="./index.php" class="btn btn-default float-right"> Retour</a>
                         </div>
                     </div>
                 </div>
@@ -50,10 +50,7 @@
                                         <p>   it's</p>
                                     </div>
 
-                                    <div class="col-sm-12">
-                                        <label for="description">Order:</label>
-                                        <p>  3</p>
-                                    </div>
+                                
 
                                     <!-- Description Field -->
                                     <div class="col-sm-12">
