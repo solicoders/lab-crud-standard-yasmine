@@ -7,12 +7,6 @@ order: 9
 {:class="sectionHeader"}
 <!-- new slide -->
 
-## Login
-
-![login](/lab-crud-standard-yasmine/maquettes/images/login.png){:width="999px"}*figure: login*
-
-<!-- new slide -->
-
 ## Page d'accueil
 
 ![index](/lab-crud-standard-yasmine/maquettes/images/index-chapitre.png){:width="1000px"}*figure: index*
