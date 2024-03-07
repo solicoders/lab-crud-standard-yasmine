@@ -7,26 +7,31 @@ order: 8
 
 -  Création d'un projet Laravel
 -  Installation d'AdminLTE
-  
-**2. Création d'un projet Laravel**
+-  Importation des CSS et JavaScript d'AdminLTE
+-   Installer les dépendances et construire les assets et layouts 
+
+
+<!-- note -->
+
+1. Création d'un projet Laravel
 
 ```bash
 composer create-project laravel/laravel mon-projet
 ```
 
-**3. Installation d'AdminLTE**
+3. Installation d'AdminLTE
 
 ```bash
 npm install admin-lte@3.1.0 @fortawesome/fontawesome-free
 ```
 
-**4. Publication des assets d'AdminLTE**
+4. Publication des assets d'AdminLTE
 
 ```bash
 php artisan vendor:publish --provider="AdminLTE\AdminLTEServiceProvider"
 ```
 
-**5. Importation des CSS et JavaScript d'AdminLTE**
+5. Importation des CSS et JavaScript d'AdminLTE
 
 Dans `public/css/app.css`, importer les CSS d'AdminLTE et Font Awesome :
 
@@ -41,13 +46,13 @@ Dans `public/js/app.js`, importer le JavaScript d'AdminLTE :
 import 'admin-lte/dist/js/adminlte';
 ```
 
-**6. Installer les dépendances et construire les assets**
+6. Installer les dépendances et construire les assets
 
 ```bash
 npm install
 npm run dev
 ```
-**Ressources utiles**
+Ressources utiles
 
 * Documentation d'AdminLTE : [https://adminlte.io/docs/3.1/](https://adminlte.io/docs/3.1/)
 * Tutoriels Laravel : [https://laracasts.com/](https://laracasts.com/)
