@@ -29,7 +29,6 @@ class ChapitreController extends Controller
         $chapitres =  $this->ChapitresRepository->paginatedData(4);
         return view ('chapitres.index', compact('chapitres','autoformations'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
