@@ -17,7 +17,7 @@
             <input name="name" type="text" class="form-control" id="name" placeholder="Entrez le titre"
                 value="{{ isset($chapitres->id) ? $chapitres->name : '' }}">
             @error('name')
-                <div>{{ $message }}</div>
+                <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
         <div class="form-group">

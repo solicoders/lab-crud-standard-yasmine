@@ -75,9 +75,9 @@ class ChapitreController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update($id, Request $request)
+    public function update($id, chapitreRequest $chapitreRequest)
     {
-        $this->ChapitresRepository->update($request->all(),$id);
+        $this->ChapitresRepository->update($chapitreRequest->all(),$id);
         return redirect()->route('chapitres.index')->with('success', 'Chapitre modifiée avec succès.');
     }
 
