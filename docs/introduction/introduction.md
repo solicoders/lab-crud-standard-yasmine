@@ -5,7 +5,7 @@ order: 1
 ---
 # Introduction
 
-![Introduction](/lab-crud-standard-yasmine/introduction/images/introduction.webp){:width="500px" }
+![Introduction](/lab-crud-standard-yasmine/introduction/images/introduction.webp){:width="900px" }
 *Introduction*
 
 <!-- note -->
