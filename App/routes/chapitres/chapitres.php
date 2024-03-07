@@ -8,5 +8,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('chapitres' , ChapitreController::class);
-Route::get('export', [ChapitreController::class, 'export'])->name('chapitres.export');
-Route::post('import', [ChapitreController::class, 'import'])->name('chapitres.import');
+
+
+Route::get('chapitres/show/{id}', [ChapitreController::class, 'show'])->name('chapitres.show');
