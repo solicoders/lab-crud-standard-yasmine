@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders\autoformations;
+namespace Database\Seeders\chapitres;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
