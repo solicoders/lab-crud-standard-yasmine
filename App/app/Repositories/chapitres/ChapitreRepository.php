@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class  ChapitreRepository extends BaseRepository {
     protected $model;
-
  function __construct(Chapitre $Chapitre) {
     $this->model = $Chapitre;
 }
@@ -23,4 +22,25 @@ public function searchData($searchdata , $perpage=4){
   }) ->paginate($perpage);
 
 }
+
+public function  getChapitrebyautoformationId($autoformationId){
+  return $this->model->where('autoformationId', $autoformationId)->paginate(4);
+   
+ }
+
+ public function getall(){
+
+  return $this->model->all();
+ }
+
+ public function find($id){
+  return $this->model->find($id);
+
+ }
+
+ public function paginatedData($perpage = 4) {
+  return $this->model->with('chapitre')->paginate($perpage);
+
+ }
+
 }
