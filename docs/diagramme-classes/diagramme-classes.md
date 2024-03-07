@@ -6,7 +6,7 @@ order: 7
 
 # Diagramme de class
 
-![Introduction](/lab-crud-standard-yasmine/diagramme-classes/images/diagramme-classes.png){:width="700px"}
+![Introduction](/lab-crud-standard-yasmine/diagramme-classes/images/diagramme-classes.png){:width="1000px"}
 *figure: diagramme de class*
 
 <!-- note -->

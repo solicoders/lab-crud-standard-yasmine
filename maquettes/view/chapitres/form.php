@@ -14,13 +14,7 @@
                                             <input name="description" type="text" class="form-control" id="description" placeholder="Entrez la description" value="it's">
                                         </div>
                                     
-                                       
-                                    
-                                        <div class="form-group">
-                                            <label for="ordre">Ordre</label>
-                                            <input name="ordre" type="number" class="form-control" id="ordre" placeholder="Entrez l'ordre" value="3">
-                                        </div>
-
+                                
 
 
 
