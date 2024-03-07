@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\autoformations\AutoFormation;
-use App\Repositories\autoformations\AutoformationRepository;
+use App\Models\chapitres\Chapitre;
+use  App\Repositories\chapitres\ChapitreRepository;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,30 +19,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test/store', function () {
-    $repository = new AutoformationRepository(new AutoFormation);
+Route::get('/test/store-chapitre', function () {
+    $repository = new ChapitreRepository(new Chapitre);
     $data = [
         'name' => 'yasmine' ,
         'description' => 'nonoooooooooooo', 
         'date_debut' => '2024-03-04 13:11:49',
-        'date_de_fin' => '2024-03-04 13:11:49'
+        'date_de_fin' => '2024-03-04 13:11:49',
+        'autoformationId' => 2
     ];
 
     $insert = $repository->store($data);
     if($insert){
-        echo 'Insertion réussie now';
+        echo 'Insertion réussie';
     }else{
         echo 'Insertion n\'est pas réussite';
     }
 });
 
-Route::get('/test/update', function () {
-    $repository = new AutoformationRepository(new AutoFormation);
+Route::get('/test/update-chapitre', function () {
+    $repository = new ChapitreRepository(new Chapitre);
     $validatedata = [
-        'name' => 'ana' ,
+        'name' => 'yasmine' ,
         'description' => 'nonoooooooooooo', 
         'date_debut' => '2024-03-04 13:11:49',
-        'date_de_fin' => '2024-03-04 13:11:49'
+        'date_de_fin' => '2024-03-04 13:11:49',
+             'autoformationId' => 2
     ];
 
     $insert = $repository->update($validatedata , 1);
@@ -54,7 +56,7 @@ Route::get('/test/update', function () {
 });
 
 Route::get('/test/{id}', function ($id) {
-    $repository = new AutoformationRepository(new AutoFormation);
+    $repository = new ChapitreRepository(new Chapitre);
     $delete = $repository->destroy($id);
     if($delete){
         echo 'delete réussie';
