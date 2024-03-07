@@ -44,15 +44,7 @@
                                         <p>Formation complète</p>
                                     </div>
 
-                                    <div class="col-sm-12">
-                                        <label for="description">Nombre chapitres:</label>
-                                        <p>27</p>
-                                    </div>
-
-                                    <div class="col-sm-12">
-                                        <label for="description">Reference:</label>
-                                        <p><a href="https://grafikart.fr/formations/laravel" target="_blank">grafikart</a></p>
-                                    </div>
+                                  
                                     <!-- Description Field -->
                                     <div class="col-sm-12">
                                         <label for="description">Date:</label>
