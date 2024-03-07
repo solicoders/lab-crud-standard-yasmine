@@ -11,7 +11,7 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="../autoformations/index.php" class="nav-link active">
+            <a href="../autoformations/index.php" class="nav-link ">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Autoformations
@@ -19,7 +19,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../chapitres/index.php" class="nav-link ">
+            <a href="../chapitres/index.php" class="nav-link active">
               <i class="nav-icon fas fa-tasks"></i>
               <p>
                Chapitres
