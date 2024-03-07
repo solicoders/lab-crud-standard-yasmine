@@ -55,8 +55,6 @@
                                             <tr>
                                             <th>Name</th>
                                                 <th>Description</th>
-                                                <th>Nombre chapitres</th>
-                                                <th>Reference</th>
                                                 <th>Start Date</th>
                                                 <th>End Date</th>
                                                 <th>Actions</th>
@@ -68,8 +66,7 @@
                                                 <td>
                                                     Formation complète 
                                                                                               </td>
-                                                 <td >27</td>
-                                                 <td><a href="https://grafikart.fr/formations/laravel" target="_blank">grafikart</a></td> 
+                                             
                                                 <td>11-7-2014</td>
                                                 <td>11-7-2014</td>
                                                 <td class="text-center">
