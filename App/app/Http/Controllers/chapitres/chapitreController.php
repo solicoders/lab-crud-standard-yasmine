@@ -25,8 +25,9 @@ class ChapitreController extends Controller
 
      public function index()
     {
+        $autoformations= $this->AutoformationsRepository->getall();
         $chapitres =  $this->ChapitresRepository->paginatedData(4);
-        return view ('chapitres.index', compact('chapitres'));
+        return view ('chapitres.index', compact('chapitres','autoformations'));
     }
 
     /**

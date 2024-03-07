@@ -33,10 +33,18 @@
                     <div class="card">
                         <div class="card-header col-md-12">
                             <div class="d-flex justify-content-between">
-                                <div class="btn-group mr-3">
-                                   
-                                    <div class="dropdown-menu">
-                                      
+                        
+                                <div class="dropdown input-group">
+                                    <div class="btn-group">
+                                        <button class="btn btn-default mr-3 dropdown-toggle" type="button" id="autoformationId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-filter text-dark pr-2 border-right"></i>
+                                            Filter by AutoFormation
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="autoformationId">
+                                            @foreach($autoformations as $autoformation)
+                                            <a class="dropdown-item" href="chapitres">{{ $autoformation->name }}</a>
+                                        @endforeach
+                                        </div>
                                     </div>
                                 </div>
 
