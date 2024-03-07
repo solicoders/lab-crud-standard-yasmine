@@ -1,26 +1,13 @@
 ---
 layout: default
 chapitre: init-app
-order: 11
+order: 8
 ---
-
 # Initialisation de l'application
 
-<!-- note -->
-
-## Travail à faire
-
-* Création d'un projet Laravel
-* Installation d'AdminLTE
-
-
-
-
-
-## Les étapes de l'installation d'AdminLTE
-
-
-
+-  Création d'un projet Laravel
+-  Installation d'AdminLTE
+  
 **2. Création d'un projet Laravel**
 
 ```bash
@@ -60,16 +47,11 @@ import 'admin-lte/dist/js/adminlte';
 npm install
 npm run dev
 ```
-
-
-
-
 **Ressources utiles**
 
 * Documentation d'AdminLTE : [https://adminlte.io/docs/3.1/](https://adminlte.io/docs/3.1/)
 * Tutoriels Laravel : [https://laracasts.com/](https://laracasts.com/)
 * Forum de la communauté Laravel : [https://laracasts.com/discuss](https://laracasts.com/discuss)
-
-
-
+  
+<!-- new slide -->
 
