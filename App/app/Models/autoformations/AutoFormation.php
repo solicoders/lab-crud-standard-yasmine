@@ -17,7 +17,7 @@ class AutoFormation extends Model
           'date_debut',
           'date_de_fin'
     ];
-    public function Chapitre(){
+    public function Autoformation(){
         return $this ->hasMany(Chapitre::class);
     }
     
