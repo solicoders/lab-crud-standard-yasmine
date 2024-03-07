@@ -4,7 +4,6 @@
         @method('PUT')
     @endif
     <div class="card-body">
-
         <div class="form-group">
             <select class="custom-select" name="autoformationId">
                 @foreach($autoformations as $autoformation)
@@ -18,7 +17,7 @@
             <input name="name" type="text" class="form-control" id="name" placeholder="Entrez le titre"
                 value="{{ isset($chapitres->id) ? $chapitres->name : '' }}">
             @error('name')
-                <div>{{ $message }}</div>
+                <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
         <div class="form-group">
@@ -40,7 +39,7 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea name="description" id="editor">{{ isset($chapitres->id) ? $chapitres->description : '' }}</textarea>
+            <textarea name="description" class="form-control" >{{ isset($chapitres->id) ? $chapitres->description : '' }}</textarea>
             @error('description')
                 <div>{{ $message }}</div>
             @enderror

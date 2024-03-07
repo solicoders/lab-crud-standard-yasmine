@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\chapitres;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\chapitres\chapitreRequest;
 use App\Repositories\chapitres\ChapitreRepository;
+
 use App\Repositories\autoformations\AutoformationRepository;
 
 use Carbon\Carbon;
@@ -42,10 +44,10 @@ class ChapitreController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(chapitreRequest $chapitreRequest)
     {
         
-        $this->ChapitresRepository->store($request->all());
+        $this->ChapitresRepository->store($chapitreRequest->all());
         return redirect()->route('chapitres.index')->with('success', 'Chapitre a été ajouté avec succès.');
 
     }
@@ -73,9 +75,9 @@ class ChapitreController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update($id, Request $request)
+    public function update($id, chapitreRequest $chapitreRequest)
     {
-        $this->ChapitresRepository->update($request->all(),$id);
+        $this->ChapitresRepository->update($chapitreRequest->all(),$id);
         return redirect()->route('chapitres.index')->with('success', 'Chapitre modifiée avec succès.');
     }
 

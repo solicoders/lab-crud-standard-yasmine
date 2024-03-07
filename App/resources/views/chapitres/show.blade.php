@@ -1,6 +1,5 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="content-wrapper" style="min-height: 1302.4px;">
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
@@ -8,7 +7,7 @@
                         <h1>Détails du chapitre</h1>
                     </div>
                     <div class="col-sm-6">
-                        <a href="{{route('chapitres.edit' , $chapitres->id)}}" class="btn btn-default float-right"><i class="far fa-edit"></i> Modifier</a>
+                        <a href="{{route('chapitres.index' , $chapitres->id)}}" class="btn btn-default float-right"><i ></i> Retour</a>
                     </div>
                 </div>
             </div>
@@ -46,5 +45,4 @@
             </div>
         </section>
 
-    </div>
 @endsection
