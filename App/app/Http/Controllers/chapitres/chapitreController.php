@@ -52,15 +52,16 @@ class ChapitreController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $chapitres = $this->ChapitresRepository->find($id);
+        return view('chapitres.show', compact('chapitres'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         $autoformations = $this->AutoformationsRepository->getAll();
         $chapitres = $this->ChapitresRepository->find($id);
@@ -75,14 +76,15 @@ class ChapitreController extends Controller
     public function update($id, Request $request)
     {
         $this->ChapitresRepository->update($request->all(),$id);
-        return redirect()->route('chapitres.index')->with('success', 'Question modifiée avec succès.');
+        return redirect()->route('chapitres.index')->with('success', 'Chapitre modifiée avec succès.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $this->ChapitresRepository->destroy($id);
+        return redirect()->route('chapitres.index')->with('success', 'Chapitre suprimeé avec succès.');
     }
 }

@@ -22,10 +22,11 @@
     </div>
     <section class="content">
         <div class="container-fluid">
-            @if (@session('success'))
-            <div class="ml-4 mt-2">
-                <span class="font-medium text-success">{{ session('success') }}</span>
-            </div>
+                @if (session('success'))
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" id='close' class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    {{ session('success') }}.
+                </div>
             @endif
             <div class="row">
                 <div class="col-12">
@@ -70,7 +71,7 @@
                                             <td>{{ $chapitre->name }}</td>
                                             <td>{{ Str::limit($chapitre->description, 30) }}</td>
 
-                                            <td class="">
+                                            <td class="d-flex">
                                                 <a href="{{ route('chapitres.show',$chapitre->id) }}"
                                                     class="btn btn-sm btn-default mx-2">
                                                     <i class="fa-regular fa-eye"></i>
@@ -79,11 +80,14 @@
                                                     class="btn btn-sm btn-default mx-2">
                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                 </a>
-                                                <button type="submit" class="btn btn-sm btn-danger"
-                                                    onclick="deleteTask({{ $chapitre->id }})" data-toggle="modal"
-                                                    data-target="#deleteTask">
-                                                    <i class="fa-solid fa-trash"></i>
-                                                </button>
+                                                <form action="{{ route('chapitres.destroy', $chapitre->id) }}"
+                                                    method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-sm btn-danger">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </form>
                                             </td>
                                         </tr>
                                         @empty

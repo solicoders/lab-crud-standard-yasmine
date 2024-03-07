@@ -6,7 +6,6 @@
     <div class="card-body">
 
         <div class="form-group">
-            <label>Custom Select</label>
             <select class="custom-select" name="autoformationId">
                 @foreach($autoformations as $autoformation)
                     <option value="{{ $autoformation->id }}">{{ $autoformation->name }}</option>
