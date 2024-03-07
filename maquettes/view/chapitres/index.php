@@ -71,7 +71,6 @@
                                             <tr>
                                                 <th>Nom</th>
                                                 <th>Discription</th>
-                                                <th>Ordre</th>
                                                 <th>Date de début</th>
                                                 <th>Date de fin</th>
                                                 <th>Actions</th>
@@ -83,7 +82,7 @@
                                             <td>
                                                     it's
                                                 </td>
-                                                <td>3</td>
+
                                                 <td>11-7-2014</td>
                                                 <td>11-7-2014</td>
                                                 <td>
@@ -109,7 +108,7 @@
                                     <div class="">
                                         <ul class="pagination  m-0 float-right mr-5">
                                             <li class="page-item"><a class="page-link text-secondary" href="#">«</a></li>
-                                            <li class="page-item active bg-info "><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item active  "><a class="page-link" href="#">1</a></li>
 
                                             <li class="page-item"><a class="page-link text-secondary" href="#">2</a></li>
                                             <li class="page-item"><a class="page-link text-secondary" href="#">3</a></li>
